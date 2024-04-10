@@ -1,0 +1,62 @@
+site_name: OpenStack, packaged for and tested on CentOS.
+site_description: >-
+  OpenStack, packaged for and tested on CentOS.
+extra_css:
+  - stylesheets/extra.css
+theme:
+  name: material
+  favicon: assets/favicon-rdo.ico
+  logo: assets/rdologo.png
+  features:
+      - announce.dismiss
+      - content.action.edit
+      - content.action.view
+      - content.code.annotate
+      - content.code.copy
+      # - content.code.select
+      # - content.footnote.tooltips
+      # - content.tabs.link
+      - content.tooltips
+      # - header.autohide
+      # - navigation.expand
+      - navigation.footer
+      - navigation.indexes
+      # - navigation.instant
+      # - navigation.instant.prefetch
+      # - navigation.instant.progress
+      # - navigation.prune
+      - navigation.sections
+      - navigation.tabs
+      # - navigation.tabs.sticky
+      - navigation.top
+      - navigation.tracking
+      - search.highlight
+      - search.share
+      - search.suggest
+      - toc.follow
+      # - toc.integrate
+  palette:
+    scheme: rdo
+nav:
+  - Home: index.md
+  - Contribution:
+    - contribute/index.md
+    - contribute/onboarding.md
+    - contribute/packager.md
+  - Tools:
+    - tools/index.md
+    - tools/packstack.md
+    - tools/dlrn.md
+    - tools/rdoinfo.md
+    - tools/rdopkg.md
+  - Workflow:
+    - workflow/index.md
+    - workflow/workflow-overview.md
+    - workflow/pipeline.md
+    - workflow/promotion-pipeline.md
+  - Deliverables:
+    - deliverables/index.md
+    - deliverables/releasing.md
+    - deliverables/repos.md
+    - deliverables/trunk-repos.md
+    - deliverables/general_concept_comparison.md
