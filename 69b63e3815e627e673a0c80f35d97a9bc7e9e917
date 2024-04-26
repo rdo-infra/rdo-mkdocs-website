@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e498f9d_d6eff744",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2024-04-26T15:51:18Z",
+      "side": 1,
+      "message": "Looks good to me, I did put a comment that we should catch up the meetings but I wouldn\u0027t hold back merging if that\u0027s the only change. I\u0027ll update things on the FAQ once the new product is released as it has a new name",
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a133e35_5e6c87b8",
+        "filename": "docs/community/community-meeting.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2024-04-26T15:51:18Z",
+      "side": 1,
+      "message": "We should probably catch this up while we\u0027re at it",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 14
+      },
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
