@@ -58,6 +58,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5a2e80d_569ba503",
+        "filename": "docs/community/community-meeting.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-05-07T11:28:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "8a133e35_5e6c87b8",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 14
+      },
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e76c583c_7bb31fad",
@@ -71,6 +95,30 @@
       "writtenOn": "2024-04-30T13:31:02Z",
       "side": 1,
       "message": "This should point to (/community/mailing-lists/)",
+      "range": {
+        "startLine": 30,
+        "startChar": 26,
+        "endLine": 30,
+        "endChar": 80
+      },
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64aa7eff_60a0c0e5",
+        "filename": "docs/contribute/onboarding.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-05-07T11:28:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e76c583c_7bb31fad",
       "range": {
         "startLine": 30,
         "startChar": 26,
@@ -104,6 +152,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "42045a0e_d5dbdc1f",
+        "filename": "docs/contribute/onboarding.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-05-07T11:28:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b7ecd21f_b1f5df9b",
+      "range": {
+        "startLine": 43,
+        "startChar": 45,
+        "endLine": 43,
+        "endChar": 96
+      },
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7cfe318b_67cbc93e",
@@ -117,6 +189,30 @@
       "writtenOn": "2024-04-30T13:31:02Z",
       "side": 1,
       "message": "Missing Caracal",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 11
+      },
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5e6084f_1d6a46a6",
+        "filename": "docs/deliverables/release-cadence.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-05-07T11:28:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7cfe318b_67cbc93e",
       "range": {
         "startLine": 26,
         "startChar": 0,
@@ -144,6 +240,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f8dce0a_d46df28a",
+        "filename": "docs/deploy/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-05-07T11:28:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d2b7523_d95207d8",
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c27a1258_f561826c",
@@ -157,6 +271,30 @@
       "writtenOn": "2024-04-30T13:31:02Z",
       "side": 1,
       "message": "I\u0027d rephrase this (note that, while p-o-i is only the CI repo all the puppet-* modules are part of the Puppet OpenStack Modules team and they are the ones intended to provide the bases for production-ready deployment tool) to something like: \n\n## Puppet OpenStack Modules\n\nPuppet OpenStack modules provide puppet-based per-service modules intended to provide automation to OpenStack cloud deployments based on Puppet automation engine. More about can be found in official [documentation](https://docs.openstack.org/puppet-openstack-guide/latest/). RDO provides rpms for puppet modules and continuously test and validate its packages and repos using puppet-openstack-integration CI [repository](https://github.com/openstack/puppet-openstack-integration).",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 216
+      },
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a83d1dd3_bf2f3d89",
+        "filename": "docs/deploy/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-05-07T11:28:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c27a1258_f561826c",
       "range": {
         "startLine": 18,
         "startChar": 0,
@@ -190,6 +328,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0d20016_ec83d445",
+        "filename": "docs/deploy/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-05-07T11:28:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dd0b3d73_25050f96",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 154
+      },
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7d366fae_639a8922",
@@ -213,6 +375,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3bf6714d_c20e3b65",
+        "filename": "docs/factory/workflow-overview.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-05-07T11:28:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7d366fae_639a8922",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 65
+      },
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d814889f_269a2422",
@@ -226,6 +412,24 @@
       "writtenOn": "2024-04-30T13:31:02Z",
       "side": 1,
       "message": "Should we include spencer somewhere in landing page?",
+      "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f616efa3_ae5e313e",
+        "filename": "docs/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-05-07T11:28:26Z",
+      "side": 1,
+      "message": "I\u0027m planning in next iteration, when I take care of CSS",
+      "parentUuid": "d814889f_269a2422",
       "revId": "69b63e3815e627e673a0c80f35d97a9bc7e9e917",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
