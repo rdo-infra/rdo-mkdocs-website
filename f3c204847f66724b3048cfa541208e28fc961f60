@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38f01090_22a17ad0",
+        "filename": ".github/workflows/ci.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-05-23T09:00:10Z",
+      "side": 1,
+      "message": "I\u0027m comparing this with what okd is doing in https://github.com/okd-project/okd.io/blob/main/.github/workflows/publish.yaml\n\nOther than they are using a container to build the doc and have some npm stuff, i assume because they use some js on it, the main differences i see are:\n\n- Configure Git credential task. Apparently this is not mandatory, although i\u0027ve seen some references in other doc to use:\n\n    user.name: \u0027github-actions[bot]\u0027\n    user.email: \u0027github-actions[bot]@users.noreply.github.com\u0027\n\nGiven that when a mail address has a +, only the part before it is relevant, i don\u0027t like using  41898282+github-actions[bot]@users.noreply.github.com. I\u0027d say to not set user.name and user.email, to avoid impersonation of gh-pages branch or using:\n\n    user.name: \u0027github-actions[bot]\u0027\n    user.email: \u0027github-actions[bot]@users.noreply.github.com\u0027\n    \n\n- To actually deploy it, okd is using :\n\n      - name: Deploy\n        uses: peaceiris/actions-gh-pages@v3\n        with:\n          github_token: ${{ secrets.GITHUB_TOKEN }}\n          publish_dir: ./public\n          \n          \nAnyway, other documentation points to use mkdocs gh-deploy, so we can probably test with it.\n\nOne last point, as per doc https://github.com/marketplace/actions/deploy-mkdocs#building-with-github_token we may need to make some manual configuration in the repo from gh webui.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 3
+      },
+      "revId": "f3c204847f66724b3048cfa541208e28fc961f60",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42eefa22_ec92bfdb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-05-23T09:00:10Z",
+      "side": 1,
+      "message": "I\u0027ve compared with what okd is using\n\nhttps://github.com/okd-project/okd.io/tree/main/.github\n\nI\u0027d suggest some changes, specially the part of credentials.",
+      "revId": "f3c204847f66724b3048cfa541208e28fc961f60",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
