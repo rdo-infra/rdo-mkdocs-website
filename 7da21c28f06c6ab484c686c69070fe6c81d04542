@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d53e78e_f90fedb5",
+        "filename": "playbooks/build.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-05-29T15:00:40Z",
+      "side": 1,
+      "message": "a command task would fail if the command exit output is !\u003d 0, so this task should not be needed, but anyway is not a blocker.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 12
+      },
+      "revId": "7da21c28f06c6ab484c686c69070fe6c81d04542",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
