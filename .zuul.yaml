@@ -1,0 +1,16 @@
+---
+- job:
+    name: rdo-mkdocs-website-build
+    parent: base
+    description: Build RDO mkdocs website
+    run: playbooks/build.yaml
+    nodeset: rdo-centos-9-stream
+
+- project:
+    check:
+      jobs:
+        - rdo-mkdocs-website-build
+    gate:
+      jobs:
+        - rdo-mkdocs-website-build
+
