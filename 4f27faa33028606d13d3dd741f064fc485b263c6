@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dda30406_f7e26cd2",
+        "filename": "playbooks/build.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-05-29T14:39:27Z",
+      "side": 1,
+      "message": "I think it\u0027s better to use: \u0027{{ ansible_user_dir }}/{{ zuul.project.src_dir }}\u0027, in case zuul switches to different location in future",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 93
+      },
+      "revId": "4f27faa33028606d13d3dd741f064fc485b263c6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
