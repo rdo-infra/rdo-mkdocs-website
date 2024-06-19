@@ -6,11 +6,20 @@
     run: playbooks/build.yaml
     nodeset: rdo-centos-9-stream
 
+- job:
+    name: rdo-mkdocs-website-pymarkdown
+    parent: base
+    description: Run markdown linter
+    run: playbooks/lint_pymarkdown.yaml
+    nodeset: rdo-centos-9-stream
+
 - project:
     check:
       jobs:
         - rdo-mkdocs-website-build
+        - rdo-mkdocs-website-pymarkdown
     gate:
       jobs:
         - rdo-mkdocs-website-build
+        - rdo-mkdocs-website-pymarkdown
 
