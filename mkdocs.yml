@@ -1,10 +1,42 @@
-site_name: OpenStack, packaged for and tested on CentOS.
-site_description: >-
-  OpenStack, packaged for and tested on CentOS.
+site_name: An OpenStack distribution
+
 extra_css:
   - stylesheets/extra.css
+
+# Custom Homepage Elements
+home_cover_image: assets/transparent_spencer.png # This path starts at your root mkdocs directory.s
+home_tagline: RDO
+home_description: |
+  OpenStack, packaged for and tested on CentOS.
+
+# Gradient Color
+home_gradient_hsla: hsla(0deg,47%,55%,1) # Default Green: hsla(160deg,47%,55%,1)
+
+# Custom Homepage Button(s)
+home_button1_name: Find us!                  # Comment this parameter out to remove the button.
+home_button1_url: community/                       # This path starts at your root mkdocs directory.
+home_button1_theme: md-button md-button--primary # Options: "md-button", "md-button md-button--primary"
+home_button1_icon: people                        # Options: "people", "gear", "image"
+home_button1_blurb: |                            # Short description of this button / section.
+ Check out our community and see how can you find us!
+
+home_button2_name: Contribute  # Comment this parameter out to remove the button.
+home_button2_url: contribute/    # This path starts at your root mkdocs directory.
+home_button2_theme: md-button # Options: "md-button", "md-button md-button--primary"
+home_button2_icon: gear       # Options: "people", "gear", "image"
+home_button2_blurb: |         # Short description of this button / section.
+  Looking for a way to add your package or update dependency? See our contibution documentation.
+
+home_button3_name: Get start   # Comment this parameter out to remove the button.
+home_button3_url:  contribute/onboarding/   # This path starts at your root mkdocs directory.
+home_button3_theme: md-button # Options: "md-button", "md-button md-button--primary"
+home_button3_icon: image      # Options: "people", "gear", "image"
+home_button3_blurb: |         # Short description of this button / section.
+  Documentation to help you start
+
 theme:
   name: material
+  custom_dir: overrides
   favicon: assets/favicon-rdo.ico
   logo: assets/rdologo.png
   features:
