@@ -4,7 +4,7 @@ extra_css:
   - stylesheets/extra.css
 
 # Custom Homepage Elements
-home_cover_image: assets/transparent_spencer.png # This path starts at your root mkdocs directory.s
+home_cover_image: assets/spencer.png # This path starts at your root mkdocs directory.s
 home_tagline: RDO
 home_description: |
   OpenStack, packaged for and tested on CentOS.
