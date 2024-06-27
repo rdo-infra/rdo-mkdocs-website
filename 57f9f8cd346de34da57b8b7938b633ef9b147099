@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "267f99ab_66375686",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-06-27T10:00:56Z",
+      "side": 1,
+      "message": "lgtm, I would only remove unneeded spencer images",
+      "revId": "57f9f8cd346de34da57b8b7938b633ef9b147099",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
