@@ -26,7 +26,7 @@ Current maintained CloudSIG releases are:
 | CentOS Stream 9  | Caracal   | supported |
 | CentOS Stream 9  | Bobcat   | supported |
 | CentOS Stream 9  | Antelope | supported |
-| CentOS Stream 9  | Zed      | supported |
+| CentOS Stream 9  | Zed      | unmaintained |
 
 
 
@@ -41,12 +41,10 @@ Currently, RDO maintains following RDO Trunk repositories:
 | :---: | :---: | :---: |
 | CentOS Stream 9  | Bobcat   | supported |
 | CentOS Stream 9  | Antelope | supported |
-| CentOS Stream 9  | Zed      | supported |
-| CentOS Stream 9  | Yoga     | extended maintenance|
-| CentOS Stream 8  | Yoga     | extended maintenance |
-| CentOS Stream 8  | Xena     | extended maintenance |
-| CentOS Stream 9  | Wallaby     | extended maintenance |
-| CentOS Stream 8  | Wallaby     | extended maintenance |
+| CentOS Stream 9  | Zed      | unmaintained |
+| CentOS Stream 9  | Yoga     | unmaintained|
+| CentOS Stream 9  | Xena     | unmaintained|
+| CentOS Stream 9  | Wallaby  | unmaintained |
 
 
 ### RHEL compatibility

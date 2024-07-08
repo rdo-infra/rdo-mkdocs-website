@@ -1,5 +1,5 @@
 ---
-title: Community meeting
+title: Community minutes
 ---
 
 # Community meeting
@@ -13,6 +13,20 @@ etherpad](https://etherpad.openstack.org/p/RDO-Meeting).
 
 The minutes for these meetings are below:
 
+* [Jul 04, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/TGYL5NDHK7HNN2URZVBHXNODON55GUHO/)
+* [Jun 26, 2024](https://lists.rdoproject.org/archives/list/users@lists.rdoproject.org/thread/GG7SVKS4MLUPWQTKE6KAY55U4EIS45ZS/)
+* [May 29, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/6U3X7D4JKJTHRT6A37ZCZG4Q2C5GZGF2/)
+* [May 22, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/VWUVUX7CEYMHV22N4OE4DPUWQUIJOORX/)
+* [Apr 24, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/QLS332HDC342267QBP3QQ27LBYC74SZV/)
+* [Apr 17, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/XGGTI4AMYMA4VIZM5WOWR7UIIJQ54K5C/)
+* [Apr 10, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/QE7437RVZZFHWU4CGF756YSDRBBAZYZL/)
+* [Apr 03, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/BVRMEFKNSKVFWEL54RZ26LJIEABM73NT/)
+* [Mar 27, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/UIXPKBJPIKOMVJH6DVKFYNCPTE5T5WPM/)
+* [Mar 20, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/7WA2G7GG6FHCYKM4ZQCFHIXDJT7T66BX/)
+* [Mar 13, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/FKB56UZMTWX4NUPWFNR6ZODHHZFO57KK/)
+* [Mar 06, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/Y23RNMJSVD5S22RC4B5M7JKZLW33GR3S/)
+* [Feb 14, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/WZUVA4FDROCD7C6O2LWKXHUAMOAWWFKT/)
+* [Feb 07, 2024](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/TALN2RRPQMJ6MVDTJJVZ6KJXQAM6GSBW/)
 * [Jan 24, 2023](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/L6JPDCL6FACK47HCA5P63NZQPYFWKJIJ/)
 * [Jan 10, 2023](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/TYVBDDDDT3SBJSU655JQNZCMPJWZNOCS/)
 * [Nov 29, 2023](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/thread/CFXMTI6BP562GZUZGSKAVW7T6OEFMBJJ/)
