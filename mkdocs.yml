@@ -85,7 +85,7 @@ nav:
     - contribute/onboarding.md
     - contribute/packager.md
     - contribute/release.md
-  - Factory:
+  - Process:
     - factory/index.md
     - factory/dlrn.md
     - factory/workflow-overview.md
@@ -94,3 +94,4 @@ nav:
   - Community:
     - community/index.md
     - community/faq.md
+    - community/community-meeting.md
