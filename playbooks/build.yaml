@@ -12,6 +12,10 @@
       pip:
         name: mkdocs-material
 
+    - name: Install mkdocs-redirect
+      pip:
+        name: pip install mkdocs-redirects
+
     - name: Build mkdocs RDO website
       command: mkdocs build
       args:
