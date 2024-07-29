@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "415e18bd_803a947a",
+        "filename": "playbooks/build.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-07-29T15:25:08Z",
+      "side": 1,
+      "message": "should be mkdocs-redirects",
+      "range": {
+        "startLine": 17,
+        "startChar": 14,
+        "endLine": 17,
+        "endChar": 42
+      },
+      "revId": "9f13c16120d1abdd7284c83d38a9d3e568a53193",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
