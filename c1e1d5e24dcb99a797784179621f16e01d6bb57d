@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c42c7ab_5e095a3b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-07-29T15:45:02Z",
+      "side": 1,
+      "message": "apparently dnf (and even wget) does not follow \u003cmeta http-equiv\u003d\"refresh\"  links:\n\n# wget https://logserver.rdoproject.org/13/53913/2/check/rdo-mkdocs-website-build/6dea9f2/buildset/site/repos/rdo-release.el9s.rpm\n\n# cat rdo-release.el9s.rpm \n\n\u003c!doctype html\u003e\n\u003chtml lang\u003d\"en\"\u003e\n\u003chead\u003e\n    \u003cmeta charset\u003d\"utf-8\"\u003e\n    \u003ctitle\u003eRedirecting...\u003c/title\u003e\n    \u003clink rel\u003d\"canonical\" href\u003d\"https://cbs.centos.org/kojifiles/packages/rdo-release/caracal/1.el9s/noarch/rdo-release-caracal-1.el9s.noarch.rpm\"\u003e\n    \u003cmeta name\u003d\"robots\" content\u003d\"noindex\"\u003e\n    \u003cscript\u003evar anchor\u003dwindow.location.hash.substr(1);location.href\u003d\"https://cbs.centos.org/kojifiles/packages/rdo-release/caracal/1.el9s/noarch/rdo-release-caracal-1.el9s.noarch.rpm\"+(anchor?\"#\"+anchor:\"\")\u003c/script\u003e\n    \u003cmeta http-equiv\u003d\"refresh\" content\u003d\"0; url\u003dhttps://cbs.centos.org/kojifiles/packages/rdo-release/caracal/1.el9s/noarch/rdo-release-caracal-1.el9s.noarch.rpm\"\u003e\n\u003c/head\u003e\n\u003cbody\u003e\nRedirecting...\n\u003c/body\u003e\n\u003c/html\u003e\n\n\nand \n\n# dnf install https://logserver.rdoproject.org/13/53913/2/check/rdo-mkdocs-website-build/6dea9f2/buildset/site/repos/rdo-release.el9s.rpm\nLast metadata expiration check: 0:03:36 ago on Mon Jul 29 15:40:16 2024.\nrdo-release.el9s.rpm                                                                                                                                                               1.8 kB/s | 718  B     00:00    \nCan not load RPM file: /var/cache/dnf/commandline-5fd3bd7dde2b1c5e/packages/rdo-release.el9s.rpm.\nCould not open: /var/cache/dnf/commandline-5fd3bd7dde2b1c5e/packages/rdo-release.el9s.rpm\n\nwhat dnf expects is a standard http 301 redirect https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301",
+      "revId": "c1e1d5e24dcb99a797784179621f16e01d6bb57d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
