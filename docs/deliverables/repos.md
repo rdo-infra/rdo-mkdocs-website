@@ -35,8 +35,11 @@ Where ``<release>`` is the name of the OpenStack release you want to install. Th
 
 On a non-CentOS system (e.g. RHEL), you can run the following command to setup the RDO GA repositories:
 
-    For CentOS Stream 9:
-    $ sudo dnf install https://www.rdoproject.org/repos/rdo-release.el9.rpm
+    For the latest OpenStack release in RHEL 9:
+    $ sudo dnf install http://trunk.rdoproject.org/rdo_release/rdo-release.el9s.rpm
+
+    For previous OpenStack releases in RHEL 9:
+    $ sudo dnf install http://trunk.rdoproject.org/rdo_release/<release name>/rdo-release-<release name>.el9s.rpm
 
 This will configure the repositories for the most recent version of RDO. RPMs for previous releases are accessible from [this location](https://repos.fedorapeople.org/repos/openstack/).
 
