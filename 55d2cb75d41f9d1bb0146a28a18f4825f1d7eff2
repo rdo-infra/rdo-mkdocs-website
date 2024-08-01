@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12b49efb_e24f3811",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-08-01T13:02:38Z",
+      "side": 1,
+      "message": "I think it needs to go under docs directory, see https://www.mkdocs.org/user-guide/deploying-your-docs/ and https://github.com/mkdocs/mkdocs/blob/master/docs/CNAME as example",
+      "revId": "55d2cb75d41f9d1bb0146a28a18f4825f1d7eff2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
