@@ -41,6 +41,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3116ae60_e109bba3",
+        "filename": "docs/deploy/packstack.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-08-09T13:20:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "52bce35e_7e042fcd",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 11
+      },
+      "revId": "b0a8b97011334a5f4598858e98035db44390c365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c7505963_5768b033",
@@ -66,6 +90,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c0e468e1_858bef8b",
+        "filename": "docs/deploy/packstack.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-08-09T13:20:55Z",
+      "side": 1,
+      "message": "I woudn\u0027t mix that concept. Both are working fine, but using hostnamectl looks better, so I remove manual edition of /etc/hosts",
+      "parentUuid": "c7505963_5768b033",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 45
+      },
+      "revId": "b0a8b97011334a5f4598858e98035db44390c365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d3272ffb_8014c174",
         "filename": "docs/deploy/packstack.md",
         "patchSetId": 1
@@ -77,6 +125,30 @@
       "writtenOn": "2024-08-09T08:16:04Z",
       "side": 1,
       "message": "Also check the indent.",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 32
+      },
+      "revId": "b0a8b97011334a5f4598858e98035db44390c365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16de089a_0c7aab95",
+        "filename": "docs/deploy/packstack.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-08-09T13:20:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d3272ffb_8014c174",
       "range": {
         "startLine": 77,
         "startChar": 0,
