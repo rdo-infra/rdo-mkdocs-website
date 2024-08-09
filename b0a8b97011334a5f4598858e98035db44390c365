@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fbd6051_de5b7df4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-08-09T08:16:04Z",
+      "side": 1,
+      "message": "some minor comments, other than that, lgtm",
+      "revId": "b0a8b97011334a5f4598858e98035db44390c365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52bce35e_7e042fcd",
+        "filename": "docs/deploy/packstack.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-08-09T08:16:04Z",
+      "side": 1,
+      "message": "This block has indent different that the rest of commands blocks, may it be fixed?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 11
+      },
+      "revId": "b0a8b97011334a5f4598858e98035db44390c365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c7505963_5768b033",
+        "filename": "docs/deploy/packstack.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-08-09T08:16:04Z",
+      "side": 1,
+      "message": "There are two different related things to check:\n- hostname set to FQDN (need to be short hostname + domain name, i.e. packstack.example.com, or something like that. To set hostname you need to use hostnamectl set-hostname \u003cfqdn\u003e\n\n- name resolution to ip for both short and fqdn, that could be done with proper dns config too, although setting it with /etc/hosts is usually a good thing.\n\nI\u0027d include in your documentation the hostnamectl part in addition with the /etc/hosts.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 45
+      },
+      "revId": "b0a8b97011334a5f4598858e98035db44390c365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3272ffb_8014c174",
+        "filename": "docs/deploy/packstack.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-08-09T08:16:04Z",
+      "side": 1,
+      "message": "Also check the indent.",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 32
+      },
+      "revId": "b0a8b97011334a5f4598858e98035db44390c365",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
