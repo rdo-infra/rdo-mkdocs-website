@@ -65,7 +65,10 @@ We have weekly IRC meetings you can participate in:
 
 ## Content writer
 
-* [Work on RDO website issues](https://github.com/rdo-infra/rdo-mkdocs-website/issues)
+All contributions are welcome, so if you would like to contribute to this page or propose change, there are two options for that:
+
+* [Propose change by Gerrrit](https://review.rdoproject.org/r/q/project:rdo-infra%252Frdo-mkdocs-website)
+* [Create RDO Jira issue](https://issues.redhat.com/projects/RDO/issues) (selecting "documentation" component during creation), if you are not familiar with this workflow, however, you can find instructions in our [onboarding](https://www.rdoproject.org/contribute/onboarding/).
 
 
 
