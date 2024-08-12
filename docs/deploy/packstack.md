@@ -37,13 +37,13 @@ If your system meets all the prerequisites mentioned below, proceed with running
 * On CentOS Stream 9:
 
 ```
-    $ sudo dnf update -y;
-      sudo dnf config-manager --enable crb;
-      sudo dnf install -y centos-release-openstack-caracal;
-      sudo setenforce 0;
-      sudo dnf update -y;
-      sudo dnf install -y openstack-packstack;
-      sudo packstack --allinone
+$ sudo dnf update -y;
+  sudo dnf config-manager --enable crb;
+  sudo dnf install -y centos-release-openstack-caracal;
+  sudo setenforce 0;
+  sudo dnf update -y;
+  sudo dnf install -y openstack-packstack;
+  sudo packstack --allinone
 ```
 
 **Note for RHEL:** Although it is expected that RDO works fine on RHEL, it is currently not tested in RHEL OS.
@@ -63,12 +63,12 @@ Machine with at least 16GB RAM, processors with hardware virtualization extensio
 
 Name the host with a fully qualified domain name rather than a short-form name to avoid DNS issues with Packstack. FQDN can be defined by command:
 ```
- sudo hostnamectl set-hostname [hostname.domain]
+$ sudo hostnamectl set-hostname [hostname.domain]
 
 ```
 example:
 ```
- sudo hostnamectl set-hostname packstack-host.example.com
+$ sudo hostnamectl set-hostname packstack-host.example.com
 
 ```
 
@@ -80,12 +80,12 @@ If you plan on having **external** network access to the server and instances, t
 Disable firewalld and NetworkManager
 
 ```
-    $ sudo systemctl disable firewalld;
-      sudo systemctl stop firewalld;
-      sudo systemctl disable NetworkManager;
-      sudo systemctl stop NetworkManager;
-      sudo systemctl enable network;
-      sudo systemctl start network
+$ sudo systemctl disable firewalld;
+  sudo systemctl stop firewalld;
+  sudo systemctl disable NetworkManager;
+  sudo systemctl stop NetworkManager;
+  sudo systemctl enable network;
+  sudo systemctl start network
 ```
 
 
