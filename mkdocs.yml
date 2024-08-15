@@ -25,7 +25,7 @@ home_button2_url: contribute/    # This path starts at your root mkdocs director
 home_button2_theme: md-button # Options: "md-button", "md-button md-button--primary"
 home_button2_icon: gear       # Options: "people", "gear", "image"
 home_button2_blurb: |         # Short description of this button / section.
-  Looking for a way to add your package or update dependency? See our contibution documentation.
+  Looking for a way to add your package or update dependency? See our contribution documentation.
 
 home_button3_name: Get start   # Comment this parameter out to remove the button.
 home_button3_url:  contribute/onboarding/   # This path starts at your root mkdocs directory.
