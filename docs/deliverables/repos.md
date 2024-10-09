@@ -39,7 +39,7 @@ On a non-CentOS system (e.g. RHEL), you can run the following command to setup t
     $ sudo dnf install http://trunk.rdoproject.org/rdo_release/rdo-release.el9s.rpm
 
     For previous OpenStack releases in RHEL 9:
-    $ sudo dnf install http://trunk.rdoproject.org/rdo_release/<release name>/rdo-release-<release name>.el9s.rpm
+    $ sudo dnf install http://trunk.rdoproject.org/rdo_release/openstack-<release name>/rdo-release-<release name>.el9s.rpm
 
 This will configure the repositories for the most recent version of RDO. RPMs for previous releases are accessible from [this location](https://repos.fedorapeople.org/repos/openstack/).
 
