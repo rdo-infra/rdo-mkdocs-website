@@ -16,6 +16,24 @@
       "message": "I\u0027m not sure about this change. \nCurrentely the link looks like: https://trunk.rdoproject.org/rdo_release/caracal/rdo-release-caracal-1.el9s.noarch.rpm",
       "revId": "99bc1a53c59aa5e528dafdeac4d841840ea2e07f",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6679fab3_50bee626",
+        "filename": "docs/deliverables/repos.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-10-10T07:05:05Z",
+      "side": 1,
+      "message": "We have moved the link from dashbord.r.o to trunk server [1][2][3]\nYou can test it with \ncurl -LO https://trunk.rdoproject.org/rdo_release/openstack-caracal/rdo-release-caracal.el9s.rpm\n\nThe other option is to add the URL currently defined in doc to the redirection links\n\n[1] https://softwarefactory-project.io/r/c/software-factory/sf-infra/+/32388\n[2] https://softwarefactory-project.io/r/c/software-factory/sf-infra/+/32391\n[3] https://softwarefactory-project.io/r/c/software-factory/sf-infra/+/32426",
+      "parentUuid": "796a9e97_3eccc069",
+      "revId": "99bc1a53c59aa5e528dafdeac4d841840ea2e07f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
