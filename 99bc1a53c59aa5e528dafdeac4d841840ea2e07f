@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "796a9e97_3eccc069",
+        "filename": "docs/deliverables/repos.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-10-10T05:53:14Z",
+      "side": 1,
+      "message": "I\u0027m not sure about this change. \nCurrentely the link looks like: https://trunk.rdoproject.org/rdo_release/caracal/rdo-release-caracal-1.el9s.noarch.rpm",
+      "revId": "99bc1a53c59aa5e528dafdeac4d841840ea2e07f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
