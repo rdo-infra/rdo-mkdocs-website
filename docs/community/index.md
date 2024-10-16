@@ -17,6 +17,102 @@ consult our [mentors list](../contribute/mentors.html.md).
 
 ## Latest RDO activity
 
+### RDO Dalmatian 2024.2 released!
+
+<img src="../../assets/spenserdalmatian-puppy.png" width="50%" class="center">
+
+The RDO community is pleased to announce the general availability of the RDO build for OpenStack 2024.2 Dalmatian! Dalmatian is the 30th release from the OpenStack project, which is the work of more than 1,000 contributors from around the world.
+
+The release is already available for CentOS Stream 9 on the CentOS mirror network in:
+
+[https://mirror.stream.centos.org/SIGs/9-stream/cloud/x86_64/openstack-dalmatian/](https://mirror.stream.centos.org/SIGs/9-stream/cloud/x86_64/openstack-dalmatian/)
+
+The highlights of the broader upstream OpenStack project may be read via [https://releases.openstack.org/dalmatian/highlights.html](https://releases.openstack.org/dalmatian/highlights.html).
+
+OpenStack Dalmatian is not marked as Skip Level Upgrade Release Process or SLURP. According to [this model](https://governance.openstack.org/tc/resolutions/20220210-release-cadence-adjustment.html) this means that upgrades will only be supported from the Caracal 2024.1 release to the next SLURP release (i.e Epoxy).
+
+
+RDO Dalmatian 2024.2 has been built and tested with the recently released [Ceph 18.2.0 Reef version](https://docs.ceph.com/en/latest/releases/reef/) which has been published by the CentOS Storage SIG in the official CentOS repositories.
+
+#### Retired projects
+ During the Dalmatian cycle, some projects have been retired or declared inactive upstream. As such, the following packages for some projects are not present in the RDO Dalmatian 2024.2 release:
+
+* [python-saharaclient](https://review.rdoproject.org/r/c/rdoinfo/+/54360)
+* [puppet-corosync](https://review.rdoproject.org/r/c/rdoinfo/+/53127)
+
+#### Contributors
+
+During the Dalmatian cycle, we saw the following new RDO contributors:
+
+* Roman Safronov
+* Archana Singh
+* pkomarov komarov
+* Sergii Golovatiuk
+* Milana Levy
+* Liron Kuchlani
+* Jaromír Wysoglad
+* Arnau Verdaguer
+* Andre Aranha
+
+Welcome to all of you and Thank You So Much for participating!
+
+But we wouldn't want to overlook anyone. A super massive Thank You to all 51 contributors who participated in producing this release. This list includes commits to rdo-packages, rdo-infra, and rdo-website repositories:
+
+* Alfredo Moralejo Alonso
+* Amy Marrich
+* Ananya Banerjee
+* Andre Aranha
+* Archana Singh
+* Arnau Verdaguer
+* Artom Lifshitz
+* Arx Cruz
+* Bhagyashri Shewale
+* Bohdan Dobrelia
+* Cédric Jeanneret
+* Chandan Kumar
+* Daniel Pawlik
+* Douglas Viroel
+* Fabien Boucher
+* Fiorella Yanac
+* Francesco Pantano
+* Goutham Pacha Ravi
+* Gregory Thiemonge
+* Grzegorz Grasza
+* Harald Jensås
+* Jaromír Wysoglad
+* Joan Francesc Gilabert
+* Joel Capitao
+* Jon Schlueter
+* Karolina Kula
+* Karthik Sundaravel
+* Lewis Denny
+* Liron Kuchlani
+* Lon Hohberger
+* Luigi Toscano
+* Maor Blaustein
+* Marihan Girgis
+* Marios Andreou
+* Martin Kopec
+* Martin Magr
+* Michael Johnson
+* Milana Levy
+* Nicolas Hicher
+* Pini Komarov
+* Roman Safronov
+* Ronelle Landy
+* Sergii Golovatiuk
+* Shreshtha Joshi
+* Soniya Vyas
+* Steve Baker
+* Takashi Kajinami
+* Tobias Urdin
+* Tristan De Cacqueray
+* Yadnesh Kulkarni
+* Yatin Karel
+
+#### The Next Release Cycle
+
+At the end of one release, focus shifts immediately to the next release i.e Epoxy.
 
 ### Centos Connect, Brussels, 2024
 
