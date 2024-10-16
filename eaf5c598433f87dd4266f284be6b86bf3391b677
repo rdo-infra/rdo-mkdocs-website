@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c93f371e_4ad98566",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-10-16T09:33:43Z",
+      "side": 1,
+      "message": "some minor hints",
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3179d883_ecee513b",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-10-16T09:33:43Z",
+      "side": 1,
+      "message": "https, this would avoid one redirection",
+      "range": {
+        "startLine": 28,
+        "startChar": 1,
+        "endLine": 28,
+        "endChar": 5
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27f34af7_63bf6e2b",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-10-16T09:33:43Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 28,
+        "startChar": 82,
+        "endLine": 28,
+        "endChar": 86
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5478ccd1_9069577e",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-10-16T09:33:43Z",
+      "side": 1,
+      "message": "to the next SLUP release (i.e Epoxy)",
+      "range": {
+        "startLine": 32,
+        "startChar": 255,
+        "endLine": 32,
+        "endChar": 278
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8730e4a2_2ca9e3c6",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-10-16T09:33:43Z",
+      "side": 1,
+      "message": "extra space",
+      "range": {
+        "startLine": 34,
+        "startChar": 149,
+        "endLine": 34,
+        "endChar": 150
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
