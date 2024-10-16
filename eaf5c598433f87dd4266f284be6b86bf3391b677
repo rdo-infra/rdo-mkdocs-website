@@ -107,6 +107,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e105bb2d_4d4283ea",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-10-16T13:43:09Z",
+      "side": 1,
+      "message": "Maybe I\u0027m too picky on security but when I see \"http\" in URL I\u0027m scared :-)",
+      "parentUuid": "f50bb38d_b8041583",
+      "range": {
+        "startLine": 28,
+        "startChar": 1,
+        "endLine": 28,
+        "endChar": 5
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5478ccd1_9069577e",
         "filename": "docs/community/index.md",
         "patchSetId": 1
@@ -142,6 +166,30 @@
       "side": 1,
       "message": "In this case we\u0027re talking the past so Caracal is correct",
       "parentUuid": "5478ccd1_9069577e",
+      "range": {
+        "startLine": 32,
+        "startChar": 255,
+        "endLine": 32,
+        "endChar": 278
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1a83b73_22189bb4",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-10-16T13:43:09Z",
+      "side": 1,
+      "message": "yes but I meant from Caracal to Epoxy.\nCurrently I\u0027m understanding that upgrade from Caracal to Dalmatian is supported",
+      "parentUuid": "11d1b6ac_908107a9",
       "range": {
         "startLine": 32,
         "startChar": 255,
