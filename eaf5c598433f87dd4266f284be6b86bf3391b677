@@ -248,6 +248,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f8e8191_ec75c905",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-10-21T08:32:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f1a83b73_22189bb4",
+      "range": {
+        "startLine": 32,
+        "startChar": 255,
+        "endLine": 32,
+        "endChar": 278
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8730e4a2_2ca9e3c6",
