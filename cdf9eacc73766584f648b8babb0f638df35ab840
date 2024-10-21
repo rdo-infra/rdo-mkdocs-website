@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5726ea85_93b27fee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 691
+      },
+      "writtenOn": "2024-10-21T12:18:45Z",
+      "side": 1,
+      "message": "And I\u0027ve updated the etherpad for use with Epoxy release for same wording",
+      "revId": "cdf9eacc73766584f648b8babb0f638df35ab840",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
