@@ -129,6 +129,54 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94bddeb9_fd6616f2",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-10-21T08:32:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "27f34af7_63bf6e2b",
+      "range": {
+        "startLine": 28,
+        "startChar": 82,
+        "endLine": 28,
+        "endChar": 86
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc4a3c86_870a8517",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-10-21T08:32:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e105bb2d_4d4283ea",
+      "range": {
+        "startLine": 28,
+        "startChar": 1,
+        "endLine": 28,
+        "endChar": 5
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5478ccd1_9069577e",
@@ -213,6 +261,30 @@
       "writtenOn": "2024-10-16T09:33:43Z",
       "side": 1,
       "message": "extra space",
+      "range": {
+        "startLine": 34,
+        "startChar": 149,
+        "endLine": 34,
+        "endChar": 150
+      },
+      "revId": "eaf5c598433f87dd4266f284be6b86bf3391b677",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4284b653_550d32ce",
+        "filename": "docs/community/index.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2024-10-21T08:32:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8730e4a2_2ca9e3c6",
       "range": {
         "startLine": 34,
         "startChar": 149,
