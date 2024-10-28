@@ -1,0 +1,8 @@
+Code-Review+2: Karolina Kula <kkula@redhat.com>
+Workflow+1: Karolina Kula <kkula@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 28 Oct 2024 09:41:40 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-infra/rdo-mkdocs-website/+/55014
+Project: rdo-infra/rdo-mkdocs-website
+Branch: refs/heads/master
