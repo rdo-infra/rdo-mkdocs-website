@@ -23,6 +23,10 @@ Puppet OpenStack modules provide puppet-based per-service modules intended to pr
 
 [This project](https://github.com/openstack/openstack-ansible) has partial support for RDO as provider for binary installations in CentOS, hovewer it's not tested in our CI. Main documentation can be find [here](https://docs.openstack.org/openstack-ansible/latest/), there is also available a [deployment guide](https://docs.openstack.org/project-deploy-guide/openstack-ansible/latest/).
 
+## RDO with Ceph as storage
+
+Under this [article](./install-with-ceph.md) you can find instructions how to install RDO with Ceph as storage.
+
 
 ## RDO on OKD - experimental
 
