@@ -87,7 +87,7 @@ DLRN is for trunk packages, while for CloudSIG ones there are [Koji](https://koj
 Whole package process building starts in Fedora. The packages exist in Fedora Package Sources [repository](https://src.fedoraproject.org/),
 maintained by packagers an builded by [Koji](https://koji.fedoraproject.org/koji/).
 If the package is needed in RDO project, it has to be rebuild for RDO. Process of building Fedora package for RDO
-using repo [gating_script](https://review.rdoproject.org/r/q/project:gating_scripts) is well described in this [document](https://www.rdoproject.org/documentation/requirements/#adding-a-new-requirement-to-rdo).
+using repo [gating_script](https://review.rdoproject.org/r/q/project:gating_scripts) is well described in this [document](requirements.md#packages-not-provided-in-centos-stream-os-repos).
 Creating such review will effect with rebuilding package in [CentOS Build System](https://cbs.centos.org/koji/).
 On this level, there may occur some errors or misconfigurations, caused by different environment.
 
