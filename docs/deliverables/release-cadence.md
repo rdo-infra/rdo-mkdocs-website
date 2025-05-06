@@ -23,6 +23,7 @@ Current maintained CloudSIG releases are:
 
 | |  |  |
 | :---: | :---: | :---: |
+| CentOS Stream 9  | Epoxy   | supported |
 | CentOS Stream 9  | Dalmatian   | supported |
 | CentOS Stream 9  | Caracal   | supported |
 | CentOS Stream 9  | Bobcat   | supported |
@@ -39,6 +40,7 @@ Currently, RDO maintains following RDO Trunk repositories:
 
 | |  |  |
 | :---: | :---: | :---: |
+| CentOS Stream 9  | Epoxy   | supported |
 | CentOS Stream 9  | Dalmatian   | supported |
 | CentOS Stream 9  | Caracal   | supported |
 | CentOS Stream 9  | Bobcat   | supported |
