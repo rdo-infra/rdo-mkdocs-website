@@ -23,10 +23,11 @@ Current maintained CloudSIG releases are:
 
 | |  |  |
 | :---: | :---: | :---: |
+| CentOS Stream 9  | Epoxy   | supported |
 | CentOS Stream 9  | Dalmatian   | supported |
 | CentOS Stream 9  | Caracal   | supported |
 | CentOS Stream 9  | Bobcat   | supported |
-| CentOS Stream 9  | Antelope | supported |
+| CentOS Stream 9  | Antelope | unmaintained |
 
 
 
@@ -39,6 +40,7 @@ Currently, RDO maintains following RDO Trunk repositories:
 
 | |  |  |
 | :---: | :---: | :---: |
+| CentOS Stream 9  | Epoxy   | supported |
 | CentOS Stream 9  | Dalmatian   | supported |
 | CentOS Stream 9  | Caracal   | supported |
 | CentOS Stream 9  | Bobcat   | supported |
@@ -57,7 +59,7 @@ Although it is expected that RDO works fine in Red Hat Enterprise Linux (RHEL) O
 
 The RDO team, in coordination with the Fedora OpenStack SIG maintains the OpenStack Clients in Fedora repositories.
 
-* [Fedopra OpenStack SIG](https://fedoraproject.org/wiki/SIGs/OpenStack)
+* [Fedora OpenStack SIG](https://fedoraproject.org/wiki/SIGs/OpenStack)
 
 ### References
 
