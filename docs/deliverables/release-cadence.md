@@ -17,7 +17,7 @@ When there is a new major CentOS release, the following OpenStack version is pac
 
 ### Maintained RDO versions in CloudSIG repos
 
-RDO [CloudSIG repositories](https://www.rdoproject.org/what/repos/) are based on tag releases provided by OpenStack project. According to the [definition of maintenance phases of OpenStack](https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases), RDO will not update CloudSIG repos after a release is transitioned to Extended Maintenance status.
+RDO [CloudSIG repositories](https://www.rdoproject.org/deliverables/repos/) are based on tag releases provided by OpenStack project. According to the [definition of maintenance phases of OpenStack](https://docs.openstack.org/project-team-guide/stable-branches.html#maintenance-phases), RDO will not update CloudSIG repos after a release is transitioned to Extended Maintenance status.
 
 Current maintained CloudSIG releases are:
 
@@ -61,4 +61,4 @@ The RDO team, in coordination with the Fedora OpenStack SIG maintains the OpenSt
 
 ### References
 
-*   [OpenStack Releases](http://releases.openstack.org/)
+*   [OpenStack Releases](https://releases.openstack.org/)
