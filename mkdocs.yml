@@ -7,7 +7,7 @@ extra_css:
 home_cover_image: assets/spencer.png # This path starts at your root mkdocs directory.s
 home_tagline: RDO
 home_description: |
-  OpenStack, packaged for and tested on CentOS.
+  OpenStack, packaged for and tested on CentOS Stream.
 
 # Gradient Color
 home_gradient_hsla: hsla(0deg,47%,55%,1) # Default Green: hsla(160deg,47%,55%,1)
