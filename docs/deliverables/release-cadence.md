@@ -32,7 +32,7 @@ Current maintained CloudSIG releases are:
 
 ### Maintained RDO versions in RDO Trunk repos
 
-In order to provide patches merged in OpenStack releases in Extended Maintenance state, RDO mantains [RDO Trunk repositories](https://www.rdoproject.org/what/trunk-repos/) following stable branches or pinned releases until they are EOL.
+In order to provide patches merged in OpenStack releases in Extended Maintenance state, RDO mantains [RDO Trunk repositories](https://www.rdoproject.org/deliverables/trunk-repos/) following stable branches or pinned releases until they are EOL.
 
 Currently, RDO maintains following RDO Trunk repositories:
 
