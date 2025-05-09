@@ -135,6 +135,23 @@
       "message": "go to https:\n\nhttps://libera.chat",
       "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76c89486_38f94c17",
+        "filename": "docs/deliverables/release-cadence.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-09T21:06:16Z",
+      "side": 1,
+      "message": "Fedora",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
