@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2689292_a4cff65c",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-09T21:01:55Z",
+      "side": 1,
+      "message": "202 5.1 - need remove space.",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "52ffc209_73a9644e",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-09T21:01:55Z",
+      "side": 1,
+      "message": "Remove space.",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fd59045_7732553d",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-09T21:01:55Z",
+      "side": 1,
+      "message": "CentOS",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee1fb7af_ce51c570",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-09T21:01:55Z",
+      "side": 1,
+      "message": "CentOS",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8ce8642_d54cc872",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-09T21:01:55Z",
+      "side": 1,
+      "message": "OpenStack",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0abf913_f4a7f68e",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-09T21:01:55Z",
+      "side": 1,
+      "message": "Update URL to:\n\nhttps://meetings.opendev.org/irclogs/%23rdo/",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ce99727_38511865",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-09T21:01:55Z",
+      "side": 1,
+      "message": "Update URL to:\n\nhttps://meetings.opendev.org/irclogs/%23openstack/",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f992c874_d0bd5a62",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-09T21:01:55Z",
+      "side": 1,
+      "message": "go to https:\n\nhttps://libera.chat",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
