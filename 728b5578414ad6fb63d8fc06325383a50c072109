@@ -16,6 +16,24 @@
       "message": "The Announcement section is a direct version of what was sent to the emails and in the past would have been placed on the blog. I\u0027m ok with the other changes but please back the announcement section changes out.",
       "revId": "728b5578414ad6fb63d8fc06325383a50c072109",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0399e537_ec8e68c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-16T17:13:24Z",
+      "side": 1,
+      "message": "I don\u0027t change any text, please check new update.",
+      "parentUuid": "b5f274a3_585189db",
+      "revId": "728b5578414ad6fb63d8fc06325383a50c072109",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
