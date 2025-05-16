@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "851b47ee_4d546314",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 981
+      },
+      "writtenOn": "2025-05-16T09:18:46Z",
+      "side": 1,
+      "message": "@jcapitao@redhat.com I think current news not very good, added formatting in fix.\n\nhttps://www.rdoproject.org/community/#rdo-epoxy-20251-released",
+      "revId": "057c5944191f0e2d8a581c920ca1b6d68d5373e3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
