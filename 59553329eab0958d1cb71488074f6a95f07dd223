@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e768b8f5_2f4ac74d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Thank you both for the review, I submitted new PS fixing Ivan\u0027s comments",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c2689292_a4cff65c",
@@ -14,6 +31,24 @@
       "writtenOn": "2025-05-09T21:01:55Z",
       "side": 1,
       "message": "202 5.1 - need remove space.",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6208b42d_78ceeefe",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2689292_a4cff65c",
       "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
@@ -35,6 +70,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "426cacd3_0645ce94",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "52ffc209_73a9644e",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1fd59045_7732553d",
@@ -48,6 +101,24 @@
       "writtenOn": "2025-05-09T21:01:55Z",
       "side": 1,
       "message": "CentOS",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14326d23_3f8a6248",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1fd59045_7732553d",
       "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
@@ -69,6 +140,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8c3b1cb_d88c9d71",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee1fb7af_ce51c570",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e8ce8642_d54cc872",
@@ -82,6 +171,24 @@
       "writtenOn": "2025-05-09T21:01:55Z",
       "side": 1,
       "message": "OpenStack",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54b310c9_9cc26f38",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e8ce8642_d54cc872",
       "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
@@ -103,6 +210,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "45ac5634_19812048",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d0abf913_f4a7f68e",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7ce99727_38511865",
@@ -116,6 +241,24 @@
       "writtenOn": "2025-05-09T21:01:55Z",
       "side": 1,
       "message": "Update URL to:\n\nhttps://meetings.opendev.org/irclogs/%23openstack/",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "621afa70_7934b0e1",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ce99727_38511865",
       "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
@@ -137,6 +280,24 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "54217b4d_a090a596",
+        "filename": "docs/community/index.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f992c874_d0bd5a62",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "76c89486_38f94c17",
@@ -150,6 +311,24 @@
       "writtenOn": "2025-05-09T21:06:16Z",
       "side": 1,
       "message": "Fedora",
+      "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f09284c9_48de166a",
+        "filename": "docs/deliverables/release-cadence.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-05-16T09:00:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "76c89486_38f94c17",
       "revId": "59553329eab0958d1cb71488074f6a95f07dd223",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
