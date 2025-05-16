@@ -1,0 +1,1720 @@
+<!--
+mkdocs-coverpage - Customizable cover page for an MkDocs site.
+Copyright (C) 2024 Tyler McCann https://github.com/tylerdotrar
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jruzicka">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon-rdo.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>RDO Packaging Introduction - An OpenStack distribution</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="rdo" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rdo-openstack-packaging" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="An OpenStack distribution" class="md-header__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../../assets/rdologo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An OpenStack distribution
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RDO Packaging Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deliverables/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deliverables
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deploy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deploy RDO
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contribute
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../factory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Process
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../community/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Community
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="An OpenStack distribution" class="md-nav__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../../assets/rdologo.png" alt="logo">
+
+    </a>
+    An OpenStack distribution
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../deliverables/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deliverables
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Deliverables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/release-cadence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release cadence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview of available RDO repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/trunk-repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RDO Trunk repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/general_concept_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparison of RDO's deliverables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/how-to-install-rdo-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to install RDO repositories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../deploy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deploy RDO
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy RDO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contribute
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Releasing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../factory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Process
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Process
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/dlrn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DLRN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/workflow-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delivery pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/promotion-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workflow - Promotion pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../community/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/community-meeting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Community minutes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packaging-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packaging overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Packaging overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distgit-where-the-spec-file-lives" class="md-nav__link">
+    <span class="md-ellipsis">
+      distgit - where the .spec file lives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="distgit - where the .spec file lives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#branches-in-distgits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches in distgits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-master-and-rpm-master-head-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      rpm-master and rpm-master-head branches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patches-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patches branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdopkg" class="md-nav__link">
+    <span class="md-ellipsis">
+      rdopkg
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdoinfo-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      rdoinfo metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlrn" class="md-nav__link">
+    <span class="md-ellipsis">
+      DLRN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdo-trunk-packaging-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDO Trunk Packaging Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDO Trunk Packaging Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-dlrn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run DLRN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting-distgit-changes-to-gerrit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting distgit changes to gerrit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browsing-gerrit-for-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Browsing gerrit for reviews
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdo-cloudsig-packaging-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDO CloudSIG Packaging Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDO CloudSIG Packaging Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-repository-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial repository setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-spec-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple .spec fix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introducingremoving-patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducing/removing patches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebasing-on-new-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebasing on new version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="rdo-openstack-packaging">RDO OpenStack Packaging</h1>
+<h2 id="packaging-overview">Packaging overview</h2>
+<p>RDO produces two set of packages repositories:</p>
+<ul>
+<li>
+<p><strong>RDO CloudSIG</strong> repositories provide packages of upstream point
+releases created through a controlled process using CentOS Community Build
+System. This is kind of "stable RDO".</p>
+</li>
+<li>
+<p><strong>RDO Trunk</strong> repositories provide packages of latest upstream code without any
+additional patches. New packages are created on each commit merged on upstream
+OpenStack projects.</p>
+</li>
+</ul>
+<p>Following diagram shows the global packaging process in RDO.</p>
+<p><img alt="RDO packaging workflow" src="../../assets/rdo-full-workflow-high-level-no-buildlogs.png" /></p>
+<p><a id="distgit"></a></p>
+<h3 id="distgit-where-the-spec-file-lives">distgit - where the .spec file lives</h3>
+<p><em>distgit</em> is a git repository which contains <code>.spec</code> file used for building
+a RPM package. It also contains other files needed for building source RPM
+such as patches to apply, init scripts etc.</p>
+<p>RDO packages' distgit repos are hosted on
+<a href="https://review.rdoproject.org/r/gitweb?p=openstack/nova-distgit.git;a=summary">review.rdoproject.org</a>
+and follow <code>$PROJECT-distgit</code> naming. You can navigate the full list of distgit repos using this
+<a href="https://review.rdoproject.org/r/#/admin/projects/?filter=distgit">link</a>.</p>
+<p>You can use <a href="#rdopkg">rdopkg</a> to clone a RDO package <code>distgit</code> and also setup related
+remotes:</p>
+<pre><code class="language-bash">$&gt; rdopkg clone openstack-nova
+Cloning distgit into ./openstack-nova/
+git clone http://review.rdoproject.org/r/p/openstack/nova-distgit.git openstack-nova
+...
+</code></pre>
+<p>Inspect package history using <code>git</code>:</p>
+<pre><code class="language-bash">$&gt; cd openstack-nova
+$&gt; git checkout mitaka-rdo
+$&gt; git log --oneline
+ded74f2 Add privsep-helper to nova sudoers file
+55981cf Add python-microversion-parse dependency
+39d576a Update .gitreview
+4e53ad0 Add missing python-cryptography BuildRequires
+</code></pre>
+<p>See what <code>rdopkg</code> thinks about current distgit:</p>
+<pre><code class="language-bash">$&gt; rdopkg pkgenv
+
+Package:   openstack-nova
+Version:   13.0.0
+Upstream:  13.0.0
+Tag style: X.Y.Z
+
+Patches style:          review
+Dist-git branch:        mitaka-rdo
+Local patches branch:   mitaka-patches
+Remote patches branch:  patches/mitaka-patches
+Remote upstream branch: upstream/master
+Patches chain:          http://review.rdoproject.org/r/631
+</code></pre>
+<p>Submit distgit changes for review:</p>
+<pre><code class="language-bash">$&gt; rdopkg review-spec
+</code></pre>
+<p><a id="branches in distgits"></a></p>
+<h4 id="branches-in-distgits">Branches in distgits</h4>
+<p>Because of the different build tools used for RDO CloudSIG and Trunk repos and
+the differences in dependencies and content in packages for each OpenStack
+release, RDO maintains several branches in distgits:</p>
+<ul>
+<li><strong>rpm-&lt;release&gt;:</strong> is used to package RDO trunk (version can be master,
+  mitaka or liberty )</li>
+<li><strong>&lt;release&gt;-rdo:</strong> is used for RDO CloudSIG.</li>
+</ul>
+<p>There are a number of expected differences between the spec files in
+rpm-&lt;release&gt; and &lt;release&gt;-rdo branches:</p>
+<ul>
+<li>
+<p>For RDO trunk, packaging has had <code>Version:</code> and <code>Release:</code> fields
+  both set to <code>XXX</code> as <code>dlrn</code> takes both of
+  these from the tags set on the git repositories. For &lt;release&gt;-rdo branches
+  they must be manually set to the right version and release.</p>
+</li>
+<li>
+<p>%changelog section is empty in rpm-&lt;release&gt;.</p>
+</li>
+<li>
+<p>Because we are packaging vanilla upstream code, patches aren't backported into the RDO Trunk repositories.</p>
+</li>
+<li>
+<p>All of the specs in rpm-&lt;release&gt; branches contain a reference to <code>%{upstream_version}</code>
+  in the <code>%setup macro</code>, this is because the subdirectory contained in
+  the source tarball contains both the version and release, this is
+  being passed into <code>rpmbuild</code>. In the Fedora packaging, spec can
+  include compatibility macro e.g. <a href="https://review.rdoproject.org/r/gitweb?p=openstack/nova-distgit.git;a=blob;f=openstack-nova.spec;h=1dc49d1f8aacbaef235f1decc2319ce42fa68156;hb=refs/heads/liberty-rdo#l12">Nova</a>
+  to avoid conflicts when backporting change from master packaging.</p>
+</li>
+<li>
+<p>The files <code>sources</code> and <code>.gitignore</code> have been truncated in the
+  master packaging</p>
+</li>
+<li>
+<p>In <code>%files</code> avoid using <code>%{version}</code> and use instead wildcard <code>*</code></p>
+</li>
+</ul>
+<h4 id="rpm-master-and-rpm-master-head-branches">rpm-master and rpm-master-head branches</h4>
+<p>As previously stated, the <code>rpm-master</code> branch is used to package RDO Trunk using
+the master source branch. However, There are two RDO Trunk builder building
+packages from that branch:</p>
+<ul>
+<li>
+<p>The <strong>main</strong> builder, which pins libraries and clients to the versions included
+  in <a href="http://git.openstack.org/cgit/openstack/requirements/plain/upper-constraints.txt">upper-constraints</a>.</p>
+</li>
+<li>
+<p>The <strong>master-head</strong>, that chases master in all packages, including libraries, clients, etc.</p>
+</li>
+</ul>
+<p>Initially, both builders use the <code>rpm-master</code> distgit branch. However, we may
+find an issue for a client or library in <code>master-head</code> that does not show up
+on the <code>main</code> builder yet. In those cases, we will create a temporary distgit
+branch called <code>rpm-master-head</code>, where the fix will be merged.</p>
+<p>Having this temporary <code>rpm-master-head</code> branch will allow us to fix the build
+for the package, and once the change in the master repo reaches a tagged release
+used by the <code>main</code> builder, we can simply cherry-pick the change and remove
+the temporary branch.</p>
+<h3 id="patches-branch">Patches branch</h3>
+<p>Because we rebase often in RDO CloudSIG repos, manual management of patch files in
+distgit would be <em>unbearable</em>. That's why each distgit branch
+has an associated <strong>patches branch</strong> which contains upstream git tree with
+extra downstream patches on top.</p>
+<p>A distgit can be automatically updated by <code>rdopkg</code> to include patches from
+associated <strong>patches branch</strong> and thus RPM patches are managed with <code>git</code>.</p>
+<p>Individual RDO patches are maintained in form of gerrit reviews on
+<a href="https://review.rdoproject.org/r/#/q/status%3Aopen+project%3Aopenstack/nova">review.rdoproject.org</a>.</p>
+<p><a id="rdopkg"></a></p>
+<h3 id="rdopkg">rdopkg</h3>
+<p><a href="https://github.com/softwarefactory-project/rdopkg">rdopkg</a> is a command line tool
+that automates many operations on RDO packages including:</p>
+<ul>
+<li>cloning package distgit and setting up remotes</li>
+<li>introducing patches</li>
+<li>rebases to new versions</li>
+<li>sending changes for review</li>
+<li>querying <code>rdoinfo</code> metadata</li>
+<li>modifying .spec file: bumping versions, managing patches, writing
+   changelog, producing meaningful commit messages, ...</li>
+</ul>
+<p><code>rdopkg</code> is a Swiss army knife of RDO packaging and it automates a number of
+repetitive and error prone processes involving several underlying tools, each
+with its own quirks.</p>
+<p>Install <code>rdopkg</code> from Fedora/EPEL repos:</p>
+<pre><code class="language-bash">$&gt; dnf install rdopkg
+</code></pre>
+<p><code>rdopkg</code> source lives at
+<a href="https://softwarefactory-project.io/dashboard/project_rdopkg">softwarefactory-project.io</a>
+but it's also mirrored to
+<a href="https://github.com/softwarefactory-project/rdopkg">github</a>.</p>
+<p>Bugs are tracked as
+<a href="https://github.com/softwarefactory-project/rdopkg/issues">github issues</a>.</p>
+<p>Poke <code>jruzicka</code> on <code>#rdo</code> for help/hate/suggestions about <code>rdopkg</code>.</p>
+<p>See also <a href="https://github.com/openstack-packages/rdopkg/blob/master/doc/rdopkg.1.adoc">man rdopkg</a>.</p>
+<p><a id="rdoinfo"></a></p>
+<h3 id="rdoinfo-metadata">rdoinfo metadata</h3>
+<p><code>rdoinfo</code> is a git repository containing RDO packaging metadata such as
+releases, packages, maintainers and more.</p>
+<p><code>rdoinfo</code> lives at
+<a href="https://review.rdoproject.org/r/gitweb?p=rdoinfo.git;a=summary">review.rdoproject.org</a>
+and is also mirrored to <a href="https://github.com/redhat-openstack/rdoinfo">github</a>.</p>
+<p>Most of the metadata is stored in <code>rdo.yml</code> and <code>deps.yml</code>, <code>tags</code> and <code>buildsys-tags</code>
+are stored in multiple YAML files as described below:</p>
+<ul>
+<li><a href="https://github.com/redhat-openstack/rdoinfo/blob/master/rdo.yml">rdo.yml</a></li>
+<li><a href="https://github.com/redhat-openstack/rdoinfo/blob/master/deps.yml">deps.yml</a></li>
+<li><a href="https://github.com/redhat-openstack/rdoinfo/tree/master/tags">tags/\&lt;tag&gt;.yml</a></li>
+<li><a href="https://github.com/redhat-openstack/rdoinfo/tree/master/buildsys-tags">buildsys-tags/cloud7-openstack-\&lt;release&gt;-\&lt;phase&gt;.yml</a></li>
+</ul>
+<p>The files under <code>tags</code> and <code>buildsys-tags</code> directories are named based on names of tags and buildsys-tags,
+this is defined as follows:-</p>
+<ul>
+<li>release: is a the OpenStack release name, as queens, rocky or stein.</li>
+<li>tag: tag for which project is build, like queens, rocky, stein, train, train-uc, etc.</li>
+<li>phase:</li>
+<li><code>candidate</code> phase is assigned to packages to be rebuilt in
+  CBS but not pushed to any RDO repository.</li>
+<li><code>el7-build</code> (only available for Rocky and newer releases)
+  is assigned to packages that only required to build other
+  packages but are not a runtime requirement for any other package.</li>
+<li><code>testing</code> phase means that the package is used in deployments using RDO Trunk
+  repo and published in a testing repo, but not official CloudSIG repository.</li>
+<li><code>release</code> phase means that is published in the official CloudSIG repository.
+  This phase is only available after a RDO version has been officially released
+  not for the one currently under development.</li>
+</ul>
+<p>To query <code>rdoinfo</code>, use <code>rdopkg info</code>:</p>
+<pre><code class="language-bash">$&gt; rdopkg info
+$&gt; rdopkg info openstack-nova
+$&gt; rdopkg info maintainers:jruzicka@redhat.com
+</code></pre>
+<p>To integrate <code>rdoinfo</code> in your software, use <code>rdopkg.actionmods.rdoinfo</code>
+module.</p>
+<h3 id="dlrn">DLRN</h3>
+<p><a href="https://github.com/openstack-packages/DLRN">DLRN</a> is a tool used to build RPM
+packages on each commit merged in a set of configurable git repositories. DLRN
+uses rdoinfo to retrieve the metadata and repositories associated with each
+project in RDO (code and distgit) and mock to carry out the actual build in an
+isolated environment.</p>
+<p>DLRN is used to build the packages in RDO Trunk repositories that are available
+from <a href="http://trunk.rdoproject.org">http://trunk.rdoproject.org</a>.</p>
+<p>NVR for packages generated by DLRN follows some rules:</p>
+<ul>
+<li>Version is set to MAJOR.MINOR.PATCH of the next upstream version.</li>
+<li>Release is 0.&lt;timestamp&gt;.&lt;short commit hash&gt;</li>
+</ul>
+<p>For example <code>openstack-neutron-8.1.1-0.20160531171125.ddfe09c.el7.centos.noarch.rpm</code>.</p>
+<h2 id="rdo-trunk-packaging-guide">RDO Trunk Packaging Guide</h2>
+<p>In RDO Trunk packages are built automatically by <a href="#DLRN">DLRN</a> from
+<code>.spec</code> templates residing in <code>rpm-master</code> and <code>rpm-$RELEASE</code> <a href="#distgit">distgits</a>.</p>
+<p>In order to build an <code>RPM</code> with the master packaging you'll need to
+install <a href="https://github.com/openstack-packages/DLRN">DLRN</a>,
+following the instructions described in this
+<a href="https://github.com/openstack-packages/DLRN/blob/master/README.rst">README</a>.</p>
+<h3 id="run-dlrn">Run DLRN</h3>
+<p>Once DLRN is installed, run <code>dlrn</code> for the package you are trying to build.</p>
+<pre><code class="language-bash">$&gt; dlrn --config-file projects.ini --local --package-name openstack-cinder
+</code></pre>
+<p>This will clone the distgit for the project you're interested in into
+<code>data/openstack-cinder_distro</code>, you can now change this packaging and
+rerun the <code>dlrn</code> command in test your changes.</p>
+<p>If you have locally changed the packaging make sure to include <code>--dev</code>
+in the command line. This switches <code>dlrn</code> into "dev mode" which
+causes it to preserve local changes to your packaging between runs so
+you can iterate on spec changes. It will also cause the most current
+public master repository to be installed in your build image(as some
+of its contents will be needed for dependencies) so that the packager
+doesn't have to build the entire set of packages.</p>
+<p>The output from <code>dlrn</code> is a repository containing the packages you
+just built along with the most recent successfully built version of
+each package. To find the most recent repository follow the symbolic
+link <code>./data/repos/current</code></p>
+<h3 id="submitting-distgit-changes-to-gerrit">Submitting distgit changes to gerrit</h3>
+<p>When modifying spec files for RDO Trunk keep in mind the considerations shown
+in <a href="#branches-in-distgits">Branches in distgits</a> and follow the recommendations
+in the <a href="https://www.rdoproject.org/documentation/rdo-packaging-guidelines/">RDO Packaging Guidelines</a>.
+Once you are happy that you have your changes in distgit ready to be reviewed,
+create a <code>git commit</code> with an appropriate comment, add a <code>git remote</code>
+pointing to gerrit and then submit your patch</p>
+<pre><code class="language-bash">$&gt; git review -s
+$&gt; git commit -p
+$&gt; git review rpm-master
+</code></pre>
+<h3 id="browsing-gerrit-for-reviews">Browsing gerrit for reviews</h3>
+<p>To look at all open patches for the upstream packaging simply use the this
+<a href="https://review.rdoproject.org/r/#/q/status:open">link</a> and look for your
+desired project, for example <code>openstack/cinder-distgit</code>.</p>
+<h2 id="rdo-cloudsig-packaging-guide">RDO CloudSIG Packaging Guide</h2>
+<p>Packaging files for CloudSIG repos live in <code>$RELEASE-rdo</code> branches of
+<a href="#distgit">distgit</a>. Patches can be introduced as needed through associated
+<a href="#patches-branch">patches branch</a>.</p>
+<h3 id="initial-repository-setup">Initial repository setup</h3>
+<p><code>rdopkg clone</code> takes care of getting the package <a href="#distgit">distgit</a> and
+also setting up all relevant git remotes defined in <a href="#rdoinfo">rdoinfo</a>.
+Use <code>-u</code>/<code>--review-user</code> option to specify your github username if it differs
+from <code>$USER</code>.</p>
+<pre><code class="language-bash">$&gt; rdopkg clone openstack-nova -u github-username
+Cloning distgit into ./openstack-nova/
+git clone http://review.rdoproject.org/r/p/openstack/nova-distgit.git openstack-nova
+Adding patches remote...
+git remote add patches http://review.rdoproject.org/r/p/openstack/nova.git
+Adding upstream remote...
+git remote add upstream git://git.openstack.org/openstack/nova
+...
+</code></pre>
+<p>Check output of <code>rdopkg pkgenv</code> to see what <code>rdopkg</code> thinks about your
+package:</p>
+<pre><code class="language-bash">$&gt; cd openstack-nova
+$&gt; git checkout mitaka-rdo
+$&gt; rdopkg pkgenv
+</code></pre>
+<h3 id="simple-spec-fix">Simple <code>.spec</code> fix</h3>
+<p>The simplest kind of change that doesn't introduce/remove patches or
+different source tarball.</p>
+<ul>
+<li>Make required changes.</li>
+<li>Bump <code>Release</code>.</li>
+<li>Provide useful <code>%changelog</code> entry describing your change.</li>
+<li>Commit the <a href="#distgit">distgit</a> changes with meaningful commit message.</li>
+<li>Send the change for review.</li>
+</ul>
+<p>Although this change is simple, <code>rdopkg fix</code> can still make some string
+manipulation for you. In following example, I add a new dependency to <code>nova</code>
+package:</p>
+<pre><code class="language-bash">$&gt; cd openstack-nova
+$&gt; git checkout mitaka-rdo
+$&gt; rdopkg fix
+
+Action required: Edit .spec file as needed and describe changes in changelog.
+
+Once done, run `rdopkg -c` to continue.
+
+$&gt; vim openstack-nova.spec
+# Add Requires line and describe the change in %changelog
+$&gt; rdopkg -c
+</code></pre>
+<p>After this, <code>rdopkg</code> generates new commit from the %changelog entry you
+provided and displays the diff:</p>
+<pre><code class="language-diff">    Epoch:            1
+    Version:          13.0.0
+   -Release:          1%{?dist}
+   +Release:          2%{?dist}
+    Summary:          OpenStack Compute (nova)
+
+    ...
+
+    Requires:         bridge-utils
+    Requires:         sg3_utils
+    Requires:         sysfsutils
+   +Requires:         banana
+
+    %description compute
+    OpenStack Compute (codename Nova) is open source software designed to
+
+    ...
+
+    %changelog
+   +* Mon May 09 2016 Jakub Ruzicka &lt;jruzicka@redhat.com&gt; 1:13.0.0-2
+   +- Require banana package for the lulz
+   +
+    * Thu Apr  7 2016 Haïkel Guémar &lt;hguemar@fedoraproject.org&gt; - 1:13.0.0-1
+    - Upstream 13.0.0
+</code></pre>
+<p>Finally, send the changes for review:</p>
+<pre><code class="language-bash">$&gt; rdopkg review-spec
+</code></pre>
+<h3 id="introducingremoving-patches">Introducing/removing patches</h3>
+<p>See <a href="#patches-branch">patches branch</a> for introduction.</p>
+<p>Following schema shows the workflow to maintain patches applied in the packaging process.</p>
+<pre><code>     +------------------------+
+     |        upstream        |
+     |  github.com/openstack  |
+     +------------------------+
+                 |
+ git cherry-pick | rdopkg review-patch
+                 V
+     +-------------------------+
+     |      patches branch     |
+     |  review.rdoproject.org  |
+     +-------------------------+
+                 |
+    rdopkg patch | rdopkg review-spec
+                 V
+     +-------------------------+
+     |        distgit          |
+     |  review.rdoproject.org  |
+     +-------------------------+
+</code></pre>
+<p>First, use <code>rdopkg get-patches</code> to get a <a href="#patches-branch">patches branch</a>
+associated with current <a href="#distgit">distgit</a>, cherry pick your patch(es) on
+top, and send them for review with <code>rdopkg review-patch</code>:</p>
+<pre><code class="language-bash">$&gt; git checkout mitaka-rdo
+$&gt; rdopkg get-patches
+$&gt; git cherry-pick YOUR_PATCH
+$&gt; rdopkg review-patch
+</code></pre>
+<p>Once the patch gets approved (not merged), you can tell <code>rdopkg</code> to update the
+distgit and send the <code>.spec</code> change for review:</p>
+<pre><code class="language-bash">$&gt; git checkout mitaka-rdo
+$&gt; rdopkg patch
+$&gt; rdopkg review-spec
+</code></pre>
+<p>For <strong>more specific example</strong>, please see
+<a href="https://www.rdoproject.org/blog/2016/09/introducing-patches-to-rdo-cloudsig-packages/">Introducing patches to RDO CloudSIG packages RDO blog post</a>.</p>
+<h3 id="rebasing-on-new-version">Rebasing on new version</h3>
+<p>tl;dr <code>rdopkg new-version</code> should take care of that:</p>
+<pre><code class="language-bash">$&gt; git checkout mitaka-rdo
+$&gt; rdopkg new-version
+</code></pre>
+<p>or <code>rdopkg new-version 1.2.3</code> to select specific version.</p>
+<p>Inspect resulting distgit commit and if you need to adjust anything, use
+<code>rdopkg amend</code> to amend and regenerate commit message from changelog.</p>
+<p>Finally, once happy with your change submit it for review with</p>
+<pre><code class="language-bash">$&gt; rdopkg review-spec
+</code></pre>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

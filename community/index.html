@@ -1,0 +1,1535 @@
+<!--
+mkdocs-coverpage - Customizable cover page for an MkDocs site.
+Copyright (C) 2024 Tyler McCann https://github.com/tylerdotrar
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../factory/promotion-pipeline/">
+      
+      
+        <link rel="next" href="faq/">
+      
+      
+      <link rel="icon" href="../assets/favicon-rdo.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Community - An OpenStack distribution</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="rdo" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#community" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="An OpenStack distribution" class="md-header__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../assets/rdologo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An OpenStack distribution
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Community
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../deliverables/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deliverables
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../deploy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deploy RDO
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../contribute/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contribute
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../factory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Process
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Community
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="An OpenStack distribution" class="md-nav__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../assets/rdologo.png" alt="logo">
+
+    </a>
+    An OpenStack distribution
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../deliverables/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deliverables
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Deliverables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deliverables/release-cadence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release cadence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deliverables/repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview of available RDO repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deliverables/trunk-repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RDO Trunk repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deliverables/general_concept_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparison of RDO's deliverables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deliverables/how-to-install-rdo-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to install RDO repositories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../deploy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deploy RDO
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy RDO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../contribute/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contribute
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/packager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Releasing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../factory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Process
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Process
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../factory/dlrn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DLRN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../factory/workflow-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../factory/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delivery pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../factory/promotion-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workflow - Promotion pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="community-meeting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Community minutes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#people-person" class="md-nav__link">
+    <span class="md-ellipsis">
+      People person
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latest-rdo-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latest RDO activity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Latest RDO activity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rdo-epoxy-20251-released" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDO Epoxy 2025.1 released!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributors:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#welcome-to-all-of-you-and-thank-you-so-much-for-participating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to all of you and Thank You So Much for participating!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-next-release-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Next Release Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Started
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Note!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centos-connect-brussels-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      CentOS Connect, Brussels, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centos-connect-brussels-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      CentOS Connect, Brussels, 2023
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    <span class="md-ellipsis">
+      User
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discuss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discuss
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Discuss">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#irc-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      IRC channels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#irc-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      IRC meetings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content writer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional sources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="community">Community</h1>
+<p>Help us make the RDO community site a great place for users and cloud operators in the Red Hat ecosystem. There are many ways to contribute to RDO, some of which are detailed below.</p>
+<p>Our community strives to operate according to the terms of the
+<a href="https://www.openstack.org/legal/community-code-of-conduct/">OpenStack Code of Conduct</a>.</p>
+<p>If you're just getting started, and are looking for a little help,
+consult our <a href="../contribute/mentors.html/">mentors list</a>.</p>
+<h2 id="people-person">People person</h2>
+<ul>
+<li><a href="mailing-lists/">Join the RDO mailing lists</a></li>
+<li>Chat on #rdo on OFTC</li>
+<li><a href="community-meeting/">Participate in weekly meetings</a></li>
+</ul>
+<h2 id="latest-rdo-activity">Latest RDO activity</h2>
+<h3 id="rdo-epoxy-20251-released">RDO Epoxy 2025.1 released!</h3>
+<p>RDO Epoxy 2025.1 Release - Important Note at Bottom</p>
+<p>The RDO community is pleased to announce the general availability of RDO builds for OpenStack 2025.1 Epoxy for RPM-based distributions, CentOS Stream and Red Hat Enterprise Linux. RDO is suitable for building private, public and hybrid clouds. Epoxy is the 31st release of the OpenStack project, backed by over 1,000 contributors worldwide.</p>
+<p>This release is already available on CentOS Stream 9 on the CentOS mirror network:</p>
+<p>https://mirror.stream.centos.org/SIGs/9-stream/cloud/x86_64/openstack-epoxy/</p>
+<p>The RDO community project curates, packages, builds, tests, and maintains a complete set of OpenStack components for RHEL and CentOS Stream and is a member of the CentOS Cloud SIG. The Cloud SIG focuses on delivering a great user experience for CentOS users looking to build and maintain on-premise, public, or hybrid clouds.</p>
+<p>All work on RDO and its downstream release, Red Hat OpenStack Services on OpenShift, is 100% open source, with all code changes going into it's related upstream first.</p>
+<p>You can read the broader upstream OpenStack project highlights at https://releases.openstack.org/epoxy/highlights.html, but here are some <strong>highlights</strong>:</p>
+<ul>
+<li>Notably, active/active support for Dell PowerStore, Dell PowerStore QoS support, NetApp adding support for active/active mode in ISCSI/FC drivers, HPE Nimble replication, and StorPool adding support for pool-to-pool cloning.</li>
+<li>To address OSSN-0090 and OSSN-0065, support was added for a new add/get location API that replaces the image update (old location-add) mechanism for consumers such as cinder and nova.</li>
+<li>Ironic includes multiple security improvements:</li>
+<li>All supported mechanism drivers (ML2/OVS, ML2/OVN) can now use the WSGI API module, and the first phase of deprecation of the eventlet library is complete.</li>
+<li>Instances with UEFI can now boot in stateless pending if the image has the hw_firmware_statelessproperty and the compute service has libvirt 8.6.0 or later.</li>
+</ul>
+<p>According to this model (https://governance.openstack.org/tc/resolutions/20220210-release-cadence-adjustment.html), upgrades will only be supported from the Caracal 2024.1 release to the next SLURP release (phase Epoxy).</p>
+<p>RDO Epoxy 2025.1 has been published by the CentOS Storage SIG in the official CentOS repository and has been built and tested with the latest released Ceph 18.2.0 Reef version (https://docs.ceph.com/en/latest/releases/reef/). <em>Note:</em> Follow the instructions in the <a href="https://www.rdoproject.org/install/install-with-ceph/">RDO documentation</a> to install OpenStack and Ceph services on the same host.</p>
+<p>During Epoxy cycle, some projects have been retired or declared inactive upstream. As such, the following packages for some projects are not present in the RDO Epoxy 2025.1 release:</p>
+<ul>
+<li>python-saharaclient (https://review.rdoproject.org/r/c/rdoinfo/+/54360)</li>
+<li>puppet-corosync (https://review.rdoproject.org/r/c/rdoinfo/+/53127)</li>
+<li>python-oauth2client (dependency https://review.rdoproject.org/r/c/rdoinfo/+/54115)</li>
+</ul>
+<p>During the next release we will continue working on retiring inactive packages in order to ensure RDO content quality and security.</p>
+<h3 id="contributors">Contributors:</h3>
+<p>During the Epoxy cycle, we saw the following new RDO contributors:</p>
+<ul>
+<li>Ashish Gupta</li>
+<li>Dmitriy Chubinidze</li>
+<li>Francisco Seruca Salgado</li>
+<li>Ivan Anfimov</li>
+<li>Lilach Avraham</li>
+<li>Manoj Katari</li>
+<li>Saurabh Agarwal</li>
+<li>Sofer Athlan-Guyot</li>
+<li>Viji Candappa</li>
+</ul>
+<h3 id="welcome-to-all-of-you-and-thank-you-so-much-for-participating">Welcome to all of you and Thank You So Much for participating!</h3>
+<p>But we wouldn’t want to overlook anyone. A super massive Thank You to all 51 contributors who participated in producing this release. This list includes commits to rdo-packages, rdo-infra, and rdo-website repositories:</p>
+<ul>
+<li>Alan Pevec</li>
+<li>Alfredo Moralejo</li>
+<li>Amy Marrich</li>
+<li>Ananya Banerjee</li>
+<li>Artom Lifshitz</li>
+<li>Ashish Gupta</li>
+<li>Bogdan Dobrelya</li>
+<li>Chandan Kumar</li>
+<li>Daniel Pawlik</li>
+<li>Dmitriy Chubinidze</li>
+<li>Douglas Viroel</li>
+<li>Eduardo Olivares</li>
+<li>Fiorella Yanac</li>
+<li>Francesco Pantano</li>
+<li>Francisco Seruca Salgado</li>
+<li>Harald Jensås</li>
+<li>Ivan Anfimov</li>
+<li>Jakub Libosvar</li>
+<li>Jaromír Wysoglad</li>
+<li>Joan Francesc Gilabert</li>
+<li>Joel Capitao</li>
+<li>Karolina Kula</li>
+<li>Lewis Denny</li>
+<li>Lilach Avraham</li>
+<li>Luigi Toscano</li>
+<li>Manoj Katari</li>
+<li>Maor Blaustein</li>
+<li>Martin Kopec</li>
+<li>Matthias Runge</li>
+<li>Matthieu Huin</li>
+<li>Miguel Garcia</li>
+<li>Mikołaj Ciecierski</li>
+<li>Pablo Rodríguez Nava</li>
+<li>Pooja Jadhav</li>
+<li>Rabi Mishra</li>
+<li>Radomir Dopieralski</li>
+<li>Rodolfo Alonso</li>
+<li>Ronelle Landy</li>
+<li>Saurabh Agarwal</li>
+<li>Sergii Golovatiuk</li>
+<li>Shreshtha Joshi</li>
+<li>Sławek Kapłoński</li>
+<li>Sofer Athlan-Guyot</li>
+<li>Takashi Kajinami</li>
+<li>Tobias Urdin</li>
+<li>Tony Breeds</li>
+<li>Viji Candappa</li>
+<li>Yatin Karel</li>
+</ul>
+<h3 id="the-next-release-cycle">The Next Release Cycle</h3>
+<p>At the end of one release, focus shifts immediately to the next release i.e Epoxy.</p>
+<h3 id="get-started">Get Started</h3>
+<p>To spin up a proof of concept cloud, quickly, and on limited hardware, try an All-In-One Packstack installation. You can run RDO on a single node to get a feel for how it works.</p>
+<p>For those that do not have any hardware or physical resources, there is the OpenStack Global Passport Program. This is a collaborative effort between OpenStack public cloud providers to let you experience the freedom, performance and interoperability of open source infrastructure. You can quickly and easily gain access to OpenStack infrastructure via trial programs from participating OpenStack public cloud providers around the world.</p>
+<h3 id="get-help">Get Help</h3>
+<p>The RDO Project has our users@lists.rdoproject.org for RDO-specific users and operators. For more developer-oriented content we recommend joining the dev@lists.rdoproject.org mailing list. Remember to post a brief introduction about yourself and your RDO story. The mailing lists archives are all available at https://www.rdoproject.org/community/mailing-lists/. You can also find extensive documentation on RDOproject.org.</p>
+<p>The <strong>#rdo</strong> channel on OFTC IRC is also an excellent place to find and give help.</p>
+<p>We also welcome comments and requests on the CentOS devel mailing list and the CentOS IRC channels (#centos, #centos-cloud, #centos-devel in Libera.Chat network), however we have a more focused audience within the RDO venues.</p>
+<p>Join us in #rdo and on the OFTC IRC network. You can also find us on Facebook and YouTube.</p>
+<h3 id="important-note">Important Note!</h3>
+<p>We had a thriving, if small, group of community members maintaining packages prior to COVID and we need to return to those days of having folks participate in this effort. The OpenStack RPM packaging effort is in need of package maintainers in order to continue having RPMs. The current maintainers have moved on to new opportunities, so while we have folks continuing to contribute, we currently have no folks to build and maintain packages. Please check out the RDO contribute pages, peruse the CentOS Cloud SIG page, and inhale the RDO packaging documentation. Please reach out if you can help!</p>
+<h3 id="centos-connect-brussels-2024">CentOS Connect, Brussels, 2024</h3>
+<iframe width="630" src="https://www.youtube.com/embed/LocoEPmbL4U" title="OpenStack RDO deployment on Community Distribution of Kubernetes (OKD)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="centos-connect-brussels-2023">CentOS Connect, Brussels, 2023</h3>
+<iframe width="630" src="https://www.youtube.com/embed/jaoIph_mEqM" title="From code to cloud - the journey of OpenStack package" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>See more at dedicated <a href="rdo-videos/">page</a>.</p>
+<h2 id="user">User</h2>
+<ul>
+<li>Share questions and solutions on <a href="https://lists.openstack.org/mailman3/lists/">openstack mailing lists</a></li>
+<li>Add <a href="../misc/troubleshoot/">the most useful solutions</a></li>
+</ul>
+<h2 id="discuss">Discuss</h2>
+<h3 id="irc-channels">IRC channels</h3>
+<p>Come chat in real-time with RDO users on <strong>IRC</strong> on the <a href="http://oftc.net">OFTC</a> server:</p>
+<ul>
+<li>
+<p><strong>#rdo</strong>: Any general conversation about RDO, including developer issues and user questions. (<a href="https://meetings.opendev.org/irclogs/%23rdo/">Transcripts.</a>)</p>
+</li>
+<li>
+<p><strong>#openstack</strong>: Remember that RDO is just a small part of a larger community. Questions about OpenStack in general, not specifically about RDO, should go to the upstream channel. (<a href="https://meetings.opendev.org/irclogs/%23openstack/">Transcripts.</a>)</p>
+</li>
+</ul>
+<p>Come chat in real-time with the CentOS Cloud SIG  on <strong>IRC</strong> on the <a href="https://libera.chat">Libera Chat</a> server:</p>
+<ul>
+<li><strong>#centos-cloud</strong>: If you have questions about the CentOS <a href="https://sigs.centos.org/cloud/">Cloud Special Interest Group (SIG)</a> and the parts of the RDO infrastructure that run in the CentOS Community Build System (cbs), this is where you're most likely to get answers.</li>
+<li><strong>#centos-devel</strong>: If you have questions about the CentOS Project</li>
+</ul>
+<h3 id="irc-meetings">IRC meetings</h3>
+<p>We have weekly IRC meetings you can participate in:</p>
+<ul>
+<li><a href="community-meeting/">RDO meetings @ every Wednesday at 14:00 UTC on #rdo on OFTC</a></li>
+<li><a href="https://sigs.centos.org/cloud/communication/meetings/">CentOS Cloud SIG meetings on the second Thursday of the month at 15:00 UTC on #centos-meeting on Libera Chat</a></li>
+</ul>
+<h2 id="content-writer">Content writer</h2>
+<p>All contributions are welcome, so if you would like to contribute to this page or propose change, there are two options for that:</p>
+<ul>
+<li><a href="https://review.rdoproject.org/r/q/project:rdo-infra%252Frdo-mkdocs-website">Propose change by Gerrrit</a></li>
+<li><a href="https://issues.redhat.com/projects/RDO/issues">Create RDO Jira issue</a> (selecting "documentation" component during creation), if you are not familiar with this workflow, however, you can find instructions in our <a href="https://www.rdoproject.org/contribute/onboarding/">onboarding</a>.</li>
+</ul>
+<h2 id="additional-sources">Additional sources</h2>
+<ul>
+<li>Check our <a href="faq/">Frequently Asked Questions (FAQ) page</a> for answers to common questions</li>
+<li>Try our <a href="../misc/troubleshoot/">troubleshooting page</a> for solutions to common problems</li>
+<li>Watch <a href="rdo-videos/">RDO videos</a>. These include recorded talks and community events.</li>
+<li>Help improve our knowledge base by turning the best answers to questions on the <a href="mailing-lists/">mailing lists</a>.</li>
+<li><a href="https://github.com/redhat-openstack/website">Fork the website on Github</a> and help us improve our documentation.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../factory/promotion-pipeline/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Workflow - Promotion pipeline">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Workflow - Promotion pipeline
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="faq/" class="md-footer__link md-footer__link--next" aria-label="Next: Frequently Asked Questions">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Frequently Asked Questions
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

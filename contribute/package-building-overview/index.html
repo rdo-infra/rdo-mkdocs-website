@@ -1,0 +1,1409 @@
+<!--
+mkdocs-coverpage - Customizable cover page for an MkDocs site.
+Copyright (C) 2024 Tyler McCann https://github.com/tylerdotrar
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="kkula">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon-rdo.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Package building - overview - An OpenStack distribution</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="rdo" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#package-building-process-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="An OpenStack distribution" class="md-header__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../../assets/rdologo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An OpenStack distribution
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Package building - overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deliverables/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deliverables
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deploy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deploy RDO
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contribute
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../factory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Process
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../community/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Community
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="An OpenStack distribution" class="md-nav__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../../assets/rdologo.png" alt="logo">
+
+    </a>
+    An OpenStack distribution
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../deliverables/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deliverables
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Deliverables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/release-cadence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release cadence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview of available RDO repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/trunk-repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RDO Trunk repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/general_concept_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparison of RDO's deliverables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/how-to-install-rdo-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to install RDO repositories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../deploy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deploy RDO
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy RDO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contribute
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Releasing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../factory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Process
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Process
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/dlrn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DLRN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/workflow-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delivery pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/promotion-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workflow - Promotion pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../community/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/community-meeting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Community minutes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-dlrn" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is DLRN?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is DLRN?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ftbfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FTBFS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trunk-packages-branching-and-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trunk packages – branching and debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-with-dlrn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with DLRN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-package-building-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging package building failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-cbs-task-number-in-your-zuul-job-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find CBS task number in your Zuul job output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-read-cbs-build-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to read CBS build logs?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-package-building-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common package building issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="package-building-process-overview">Package building process – overview</h1>
+<p>In the RDO Project, we maintain two kinds of repos: RDO Trunk repositories and RDO CloudSIG repositories.
+RDO Trunk repositories have no-deps Openstack packages, which contain client, core, libs, puppet and tempest packages, while
+CloudSIG packages are a set of packages built by CentOS Community Build System.
+For Centos9 Stream master Trunk (DLRN) packages are stored in <a href="https://trunk.rdoproject.org/centos9-master/">trunks</a> and
+CloudSIG packages ends up in <a href="http://mirror.stream.centos.org/SIGs/9-stream/cloud/x86_64/">CentOS mirror</a>.</p>
+<p>During the cycle of a given OpenStack release, we have the following recurring activities:</p>
+<ul>
+<li><a href="../add-packages/">New packages are created when needed</a>.</li>
+<li>Each package is rebuilt anytime a new commit is available in the repository upstream on the RDO Trunk builder.</li>
+<li>If the package build fails, a review is automatically opened in our <a href="https://review.rdoproject.org">Gerrit review system</a>, so the package maintainers can work on a fix.</li>
+<li>Periodically, the latest repository where all packages had been successfully built goes through a number of CI jobs. If all jobs are successful, the repository is <em>promoted</em>, meaning it is considered as good enough for other upstream CIs to rely on it for their jobs.</li>
+</ul>
+<h2 id="what-is-dlrn">What is DLRN?</h2>
+<p>In simplest words, DLRN is a tool which builds packages. In automated way DLRN is building package every time when new
+commit is merged in observed upstream repos, creating individual, separated environment basing on code, distgit and
+<a href="https://review.rdoproject.org/r/q/project:rdoinfo">rdoinfo</a> repo. DLRN can be also used to manually debug failing
+packages.</p>
+<h3 id="ftbfs">FTBFS</h3>
+<p>If build succeeds, package appears in <a href="https://trunk.rdoproject.org/">trunk</a>. If fails, automatic
+FTBFS (Fail To Build From Source) review is created in <a href="https://review.rdoproject.org/r/">gerrit</a>, providing building
+logs and information which commit caused FTBFS, like in <a href="https://review.rdoproject.org/r/c/openstack/tacker-distgit/+/42687">example</a>.
+All FTBFS’ have to be reviewed and fixed. Current FTBFS can be easily spotted on <a href="https://dashboards.rdoproject.org/rdo-dev">RDO dashboard</a>.
+Other way to check statuses of last builds is checking <a href="https://trunk.rdoproject.org/centos9-master/report.html">Latest Build Reports</a>, for example for Centos 9 master.</p>
+<h3 id="trunk-packages-branching-and-debugging">Trunk packages – branching and debugging</h3>
+<p>Each trunk distgit has multiple branches. Under development one is rpm-master and the stable ones are named
+\&lt;release&gt;-rdo. The rpm-master branch has <code>Version:</code> and <code>Release:</code> fields filled with XXX, which are automatically
+replaced with proper values during the DLRN building process. In \<release\>-rdo branch, those values are filled while
+cutting the branch:  master -> stable/\&lt;release&gt; during the release process.
+Having such situation, a different procedure of bug/FTBFS reproduction is needed.</p>
+<h3 id="debugging-with-dlrn">Debugging with DLRN</h3>
+<p>Most reliable way to create a debugging or testing environment is Centos 9 container or vm usage.
+Steps to reproduce FTBFS:</p>
+<ol>
+<li>Clone DLRN repo:</li>
+</ol>
+<pre><code class="language-bash">        git clone https://github.com/softwarefactory-project/DLRN.git
+</code></pre>
+<ol>
+<li>
+<p>Follow setup procedure from <a href="https://github.com/softwarefactory-project/DLRN/blob/master/README.rst">README</a>.</p>
+</li>
+<li>
+<p>Clone rdoinfo repository:</p>
+</li>
+</ol>
+<pre><code class="language-bash">        git clone &quot;https://review.rdoproject.org/r/rdoinfo&quot;
+</code></pre>
+<ol>
+<li>Edit <code>projects.ini</code> files with desired data. If you don’t know how to reproduce a remote DLRN build, check logs from
+building in FTBFS review. Below you can see example of <code>projects.ini</code> preparation for Centos 9 master.</li>
+</ol>
+<pre><code class="language-bash">        sed -i 's%target=.*%target=centos9-stream%' projects.ini
+        sed -i 's%source=.*%source=master%' projects.ini
+        sed -i 's%baseurl=.*%baseurl=https://trunk.rdoproject.org/centos9/%' projects.ini
+        sed -i 's%tags=.*%tags=%' projects.ini
+</code></pre>
+<ol>
+<li>Run DLRN command (example package name):</li>
+</ol>
+<pre><code class="language-bash">        dlrn --head-only --dev --local --verbose-build --package-name openstack-tacker --info-repo ../rdoinfo
+</code></pre>
+<p>You can find more information and explanation of DLRN usage in the <a href="https://dlrn.readthedocs.io/en/latest/">documentation</a>.</p>
+<ol>
+<li>
+<p>Edit the package distgit or package code directly if needed. Both of them are now created inside DLRN directory,
+like data/openstack-tacker_distro for distgit and data/openstack-tacker for code.</p>
+</li>
+<li>
+<p>Run dlrn command once again. You should now be able to see reproduced error.</p>
+</li>
+</ol>
+<h2 id="dependencies">Dependencies</h2>
+<p>CloudSIG packages have different workflow of creating, maintaining and storing. They are finally placed in this <a href="http://mirror.stream.centos.org/SIGs/9-stream/cloud/">repo</a>.
+Describing CloudSIG packages, it is crucial to explain two packages building systems taking part in whole process.
+DLRN is for trunk packages, while for CloudSIG ones there are <a href="https://koji.fedoraproject.org/koji/">Koji</a> and <a href="https://cbs.centos.org/koji/">CBS</a>.
+Whole package process building starts in Fedora. The packages exist in Fedora Package Sources <a href="https://src.fedoraproject.org/">repository</a>,
+maintained by packagers an builded by <a href="https://koji.fedoraproject.org/koji/">Koji</a>.
+If the package is needed in RDO project, it has to be rebuild for RDO. Process of building Fedora package for RDO
+using repo <a href="https://review.rdoproject.org/r/q/project:gating_scripts">gating_script</a> is well described in this <a href="../requirements/#packages-not-provided-in-centos-stream-os-repos">document</a>.
+Creating such review will effect with rebuilding package in <a href="https://cbs.centos.org/koji/">CentOS Build System</a>.
+On this level, there may occur some errors or misconfigurations, caused by different environment.</p>
+<h3 id="debugging-package-building-failures">Debugging package building failures</h3>
+<h3 id="logs">Logs</h3>
+<p>After pushing your change to code review system, CI will trigger a bunch of tests on it and give results as vote
+or/and logs. If +1 is given by Zuul, everything went well. If -1 appears, it means that tests didn’t pass,
+so debugging is needed.</p>
+<h3 id="find-cbs-task-number-in-your-zuul-job-output">Find CBS task number in your Zuul job output</h3>
+<p>First step is to check job logs. They are available after clicking on job name in Gerrit. Depending on which point of
+building failure happens, the true cause of it may be found in this job output or has to be found directly in CBS
+building job. In this <a href="https://logserver.rdoproject.org/28/42728/3/check/deps-cbs-validate/b837f69/job-output.txt">example</a> build failure reason can be found in Zuul job output,
+but in <a href="https://logserver.rdoproject.org/23/42723/1/check/deps-cbs-validate/7a4055b/job-output.txt">this one</a>, the real reason has to be looked for in CBS logs,
+because Zuul jobs one doesn’t provide anything useful. This is happening when the error doesn’t refers to spec file,
+but the building process itself. The easiest way to find proper link to CBS build is to find “taskID” word
+in <strong>job_output.txt</strong>, the result should looks like: Task console is: <a href="https://cbs.centos.org/koji/taskinfo?taskID=2800330">https://cbs.centos.org/koji/taskinfo?taskID=2800330</a>.
+Note, that each job and each patchset has its own individual build number.</p>
+<h3 id="how-to-read-cbs-build-logs">How to read CBS build logs?</h3>
+<p>After going to the provided URL, general information about build will appear. The logs can be find by clicking on red
+hyperlink “buildArch“. Provided output is placed in following files:
+* build.log
+* hw_info.log
+* mock_output.log
+* root.log
+* state.log</p>
+<p>If the error refers to dependencies, it will be placed in <strong>root.log</strong>.
+Also some errors may occur in other files, especially in <strong>build.log</strong>.</p>
+<h3 id="common-package-building-issues">Common package building issues</h3>
+<ul>
+<li>Missing dependency</li>
+</ul>
+<p>In a root.log file:<br />
+<em>DEBUG util.py:444: No matching package to install: 'python3dist(xxx)'<br />
+DEBUG util.py:444: Not all dependencies satisfied</em></p>
+<p><strong>Solution:</strong> The dependency is not tagged yet in our repo or not available.
+Contact RDO maintainers to discuss adding a new dependency.</p>
+<ul>
+<li>
+<p>SPEC file syntax error</p>
+</li>
+<li>
+<p>Infra issue (timeout)</p>
+</li>
+</ul>
+<p><strong>Solution:</strong> If there are timeouts in refreshing repo metadata or other steps, it’s good idea to recheck tests,
+by typing comment “recheck” in Gerrit review.</p>
+<ul>
+<li>failing <code>%check</code> phase<br />
+Some unit tests failed during package building, like in <a href="https://logserver.rdoproject.org/60/42260/8/check/DLRN-rpmbuild-centos9/a145af7/job-output.txt">example</a>.</li>
+</ul>
+<p><strong>Solution:</strong> Create testing environment and try to reproduce the error. Then, try to figure out and fix failing reason.
+It is possible to exclude failing test(s), but we only use that solution if it’s strongly
+justified (like issue created in bugzilla or other bug tracker).</p>
+<ul>
+<li>missing macro</li>
+</ul>
+<p>in build.log file:<br />
+<em>RPM build errors:
+/var/tmp/rpm-tmp.s6H1EG: line 32: fg: no job control<br />
+error: Bad exit status from /var/tmp/rpm-tmp.s6H1EG (%generate_buildrequires)<br />
+Bad exit status from /var/tmp/rpm-tmp.s6H1EG (%generate_buildrequires)<br />
+Child return code was: 1</em></p>
+<p><strong>Solution:</strong>
+ add <code>BuildRequires: pyproject-rpm-macros</code> to build requirements.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1482 @@
+<!--
+mkdocs-coverpage - Customizable cover page for an MkDocs site.
+Copyright (C) 2024 Tyler McCann https://github.com/tylerdotrar
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="karolinku">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon-rdo.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Step by step RDO release guide - An OpenStack distribution</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="rdo" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-by-step-rdo-release-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="An OpenStack distribution" class="md-header__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../../assets/rdologo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An OpenStack distribution
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Step by step RDO release guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deliverables/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deliverables
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deploy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deploy RDO
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contribute
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../factory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Process
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../community/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Community
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="An OpenStack distribution" class="md-nav__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../../assets/rdologo.png" alt="logo">
+
+    </a>
+    An OpenStack distribution
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../deliverables/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deliverables
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Deliverables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/release-cadence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release cadence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview of available RDO repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/trunk-repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RDO Trunk repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/general_concept_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparison of RDO's deliverables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/how-to-install-rdo-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to install RDO repositories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../deploy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deploy RDO
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy RDO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contribute
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Releasing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../factory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Process
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Process
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/dlrn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DLRN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/workflow-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delivery pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/promotion-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workflow - Promotion pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../community/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/community-meeting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Community minutes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-create-cbs-tags-for-next-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create CBS tags for next release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-a-dlrn-builder-for-the-new-openstack-release-in-rdo-trunk-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Create a DLRN builder for the new OpenStack release in RDO Trunk servers.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Create a DLRN builder for the new OpenStack release in RDO Trunk servers.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-new-dlrn-trunk-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare new DLRN trunk builder.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootstrapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bootstrapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-usual-operations-for-the-new-dlrn-trunk-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable usual operations for the new DLRN Trunk builder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-distgit-cbs-builds-for-next-release-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable distgit CBS builds for next release branch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-requirement-check-reqcheck" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Requirement check - reqcheck
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-build-libs-clients-and-core-projects-in-cloudsig-repos-on-cbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Build libs, clients and core projects in CloudSIG repos on CBS.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pin-branch-and-build-non-openstack-puppet-modules-in-cloudsig-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Pin, branch and build non-OpenStack puppet modules in CloudSIG repos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-move-master-rdo-trunk-to-next-release-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Move master RDO Trunk to next release tags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-branch-openstack-puppet-modules-and-build-them-in-cloudsig-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Branch OpenStack puppet modules and build them in CloudSIG repos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-pin-branch-and-build-tempest-and-tempest-plugins-in-cloudsig-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Pin, branch and build tempest and tempest plugins in CloudSIG repos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-create-the-puppet-promotion-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Create the puppet promotion pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-create-the-next-release-branch-for-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Create the next release branch for dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-add-support-of-the-new-release-in-ansible-role-weirdo-puppet-openstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Add support of the new release in ansible-role-weirdo-puppet-openstack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-create-the-rdo-release-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Create the rdo-release RPM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-create-weirdo-jobs-to-promote-to-release-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Create weirdo jobs to promote to -release tag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-add-the-new-release-to-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Add the new release to dashboards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-create-the-new-centos-release-openstack-" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Create the new centos-release-openstack-
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-promote-ga-builds-to-testing-and-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Promote GA builds to -testing and -release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-enable-remaining-monitoring-on-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Enable remaining monitoring on Grafana
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-unpin-non-openstack-puppet-modules-and-tempest-plugins-in-master-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Unpin non OpenStack puppet modules and tempest plugins in master release
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="step-by-step-rdo-release-guide">Step by step RDO release guide</h1>
+<p>Creating a new release in RDO is a complex process with multiple dependencies. This overview provides users and contributors information on
+what leads up to a release and what detailed steps are to be performed before a new release. Not all steps are frozen in the sequence, but
+our experience shows that this is the most efficient way of working and some steps may be done in parallel.</p>
+<p>These steps follow the processes found in <a href="https://releases.openstack.org/reference/release_models.html">OpenStack releases</a> -
+typically for the cycle-with-intermediary type of releasing - which is repeatable every 6 months. First there are provided non-client
+libraries, followed by client libraries, then services and lastly there are provided release-trailing deliverables.</p>
+<h3 id="1-create-cbs-tags-for-next-release">1. Create CBS tags for next release</h3>
+<p>At the very beginning, a new CBS tag for the next release should be created. This is needed before performing a switch to the new master.
+This operation is performed by creating a bug on <a href="https://pagure.io/centos-infra">pagure.io/centos-infra</a>. An example can be found
+<a href="https://pagure.io/centos-infra/issue/1077">here</a>.</p>
+<h3 id="2-create-a-dlrn-builder-for-the-new-openstack-release-in-rdo-trunk-servers">2. Create a DLRN builder for the new OpenStack release in RDO Trunk servers.</h3>
+<h4 id="prepare-new-dlrn-trunk-builder">Prepare new DLRN trunk builder.</h4>
+<p>DLRN builder is an instance used to build RDO Trunk repos (follow articles about <a href="https://www.rdoproject.org/what/trunk-repos/">RDO Trunk repos</a>
+and <a href="https://www.rdoproject.org/what/repos/">RDO CloudSIG repos</a>). Before we start working on new packages, we have to set the builder.
+The first step is a change in <a href="https://github.com/rdo-infra/ansible-role-dlrn/">rdo-infra/ansible-role-dlrn</a>, where we define new repositories for
+the builder, as an <a href="https://review.rdoproject.org/r/c/rdo-infra/ansible-role-dlrn/+/47053">example</a>. The second step is to define the
+new builder in <a href="https://softwarefactory-project.io/r/c/software-factory/sf-infra/+/27459">sf-infra</a>. A patch to sf-infra will to depend on
+the previous one from <a href="https://review.rdoproject.org/r/c/rdo-infra/ansible-role-dlrn/+/47053">ansible-role-dlrn</a>.</p>
+<p>Before starting the building process, some steps have to be performed on the builder:
+1. Create the database, users and tables
+2. Set up authentication from trunk-centos8.rdoproject.org host to trunk.rdoproject.org
+3. Synchronize deps</p>
+<h4 id="bootstrapping">Bootstrapping</h4>
+<p>Once the DLRN builder is ready, the bootstrap process can be started. This process is about building all DLRN packages in the proper sequence.
+Building is automated, but due to dependencies it may need to be restarted several times, and sometimes requires fixes in spec files.</p>
+<h4 id="enable-usual-operations-for-the-new-dlrn-trunk-builder">Enable usual operations for the new DLRN Trunk builder</h4>
+<p>The new builder, to be fully operated, needs to have enabled operations which were not possible before bootstrapping. Examples can be
+found in <a href="https://softwarefactory-project.io/r/c/software-factory/sf-infra/+/27702">sf-infra</a> and <a href="https://review.rdoproject.org/r/c/rdo-infra/ansible-role-dlrn/+/47529">ansible-role-dlrn</a>.</p>
+<p>This operation enables building new packages in the builders with any new commit in the projects (operated by cron), enables triggering
+automated gerrit reviews in case of <a href="https://www.rdoproject.org/documentation/package-building-overview/#FTBFS">FTBFS</a> and sets the new
+builder visible on <a href="https://trunk.rdoproject.org/">trunk.rdoproject.org</a> website.</p>
+<h4 id="enable-distgit-cbs-builds-for-next-release-branch">Enable distgit CBS builds for next release branch</h4>
+<p>When reviews appear in the new release branch, appropriate jobs and builds have to be <a href="https://review.rdoproject.org/r/c/config/+/47480">triggered</a>.</p>
+<h3 id="3-requirement-check-reqcheck">3. Requirement check - reqcheck</h3>
+<p>Most of the projects we are packaging are constantly being developed on, so their requirements can change - added, removed, in the new version or
+constrained. This check is being done manually, using the <a href="https://github.com/softwarefactory-project/rdopkg">rdopkg reqcheck</a> tool. First libraries
+and client packages are rechecked, then the core packages (like openstack-nova).</p>
+<p>Even though the process seems to be not complicated, the appearing issues are often connected with missing dependencies.
+An example requirement check can be found <a href="https://review.rdoproject.org/r/c/openstack/barbican-distgit/+/47395">here</a>.</p>
+<h3 id="4-build-libs-clients-and-core-projects-in-cloudsig-repos-on-cbs">4. Build libs, clients and core projects in CloudSIG repos on CBS.</h3>
+<p>Once the requirement check is completes, the next step can be performed - building. To proceed with this, the new releases has to be created upstream.
+This step requires following steps:</p>
+<ol>
+<li>Cut rpm-master branch of distgit repo to create the \&lt;release&gt;-rdo branch. This can be done with branching
+<a href="https://github.com/rdo-infra/releng/blob/master/scripts/new_release_scripts/branch_projects.sh">script</a> from releng tooling, as an
+<a href="https://review.rdoproject.org/r/c/config/+/47675">example</a>, or manually by modifying <a href="https://review.rdoproject.org/r/q/project:config">config</a> repo.</li>
+<li>Submit <a href="https://review.rdoproject.org/r/c/openstack/glance-distgit/+/47699">review</a> with new version - a helpful <a href="https://github.com/rdo-infra/releng/blob/master/scripts/new_release_scripts/send_new_version.sh">script</a>.</li>
+</ol>
+<h3 id="5-pin-branch-and-build-non-openstack-puppet-modules-in-cloudsig-repos">5. Pin, branch and build non-OpenStack puppet modules in CloudSIG repos</h3>
+<p>Non-OpenStack modules have to be pinned to the last promoted hash at branching time, since they don't follow the OpenStack lifecycle
+and RDO stable releases do not follow the master branches for them. The package has to be built based on the commit snapshot.
+This operation is done with the cooperation of the <a href="https://governance.openstack.org/tc/reference/projects/puppet-openstack.html">Puppet OpenStack team</a> -
+these modules can be pinned after p-o-i team confirmation.</p>
+<ol>
+<li>Pin non OpenStack puppet modules, as <a href="https://review.rdoproject.org/r/c/rdoinfo/+/47673">example</a>, using releng <a href="https://github.com/rdo-infra/releng/blob/master/scripts/new_release_scripts/pin-non_os-puppet.sh">script</a>.</li>
+<li>Cut branches, as in this <a href="https://review.rdoproject.org/r/c/config/+/47679">review</a>.</li>
+<li>Build, with releng <a href="https://github.com/rdo-infra/releng/blob/master/scripts/new_release_scripts/create_build_snap.sh">script</a>.</li>
+</ol>
+<h3 id="6-move-master-rdo-trunk-to-next-release-tags">6. Move master RDO Trunk to next release tags</h3>
+<p>Rdoinfo buildsys-tags and tags can be moved to the next-release after openstack/requirements is branched.
+As in <a href="https://review.rdoproject.org/r/c/rdoinfo/+/47877">review</a> and <a href="https://review.rdoproject.org/r/c/rdoinfo/+/47880">review</a>.
+This action has to be coordinated with the reviews mentioned in the "Prepare new DLRN trunk builder" section above.</p>
+<h3 id="7-branch-openstack-puppet-modules-and-build-them-in-cloudsig-repos">7. Branch OpenStack puppet modules and build them in CloudSIG repos</h3>
+<p>There is a bot which will automatically send the update reviews, when the tagged releases are created upstream.
+To trigger this step, we have to <a href="https://review.rdoproject.org/r/c/config/+/47909">branch the distgit projects</a> before
+the upstream p-o-i project creates the releases for the OpenStack puppet modules.</p>
+<h3 id="8-pin-branch-and-build-tempest-and-tempest-plugins-in-cloudsig-repos">8. Pin, branch and build tempest and tempest plugins in CloudSIG repos</h3>
+<p>Following steps are required to perform this operation:</p>
+<ol>
+<li>Branch and build the tempest package with bootstrap mode enabled, as <a href="https://review.rdoproject.org/r/c/openstack/tempest-distgit/+/45062">here</a></li>
+<li>Disable the bootstrap mode without bumping release, to have other Openstack-tempest packages in RDO Trunk - <a href="https://review.rdoproject.org/r/c/openstack/tempest-distgit/+/45203">example</a></li>
+<li>Cut branches, as in this <a href="https://review.rdoproject.org/r/c/config/+/47729">review</a></li>
+<li>Pin tempest plugins in <a href="https://review.rdoproject.org/r/c/rdoinfo/+/47796">rdoinfo</a></li>
+<li>Review automatically created reviews</li>
+<li><a href="https://review.rdoproject.org/r/c/openstack/tempest-distgit/+/47727">Update</a> version of tempest plugin project</li>
+</ol>
+<h3 id="9-create-the-puppet-promotion-pipeline">9. Create the puppet promotion pipeline</h3>
+<p>The Puppet promotion pipelines have to be defined as in <a href="https://review.rdoproject.org/r/c/rdo-jobs/+/47911">patchset</a>. Tests
+can be performed using <a href="https://review.rdoproject.org/r/c/testproject/+/31972">testinfo</a>.
+Newly defined jobs have to be assigned to the project - <a href="https://review.rdoproject.org/r/c/config/+/47936">example</a>.</p>
+<h3 id="10-create-the-next-release-branch-for-dependencies">10. Create the next release branch for dependencies</h3>
+<p>As development of dependencies is still ongoing, the new branch has to be prepared for featuring builds - as in this
+<a href="https://review.rdoproject.org/r/c/config/+/47901">review</a>.</p>
+<p>New branches have to be created in the upstream <a href="https://github.com/openstack/requirements/">requirements</a> repo to complete this task.</p>
+<h3 id="11-add-support-of-the-new-release-in-ansible-role-weirdo-puppet-openstack">11. Add support of the new release in ansible-role-weirdo-puppet-openstack</h3>
+<p>This is an example <a href="https://review.rdoproject.org/r/c/rdo-infra/ansible-role-weirdo-puppet-openstack/+/45298">review</a> of this operation.</p>
+<h3 id="12-create-the-rdo-release-rpm">12. Create the rdo-release RPM</h3>
+<p>Following step needs to be performed:
+1. Create next release branch in distgit repo, as in <a href="https://review.rdoproject.org/r/c/config/+/47909">example</a>
+2. <a href="https://review.rdoproject.org/r/c/rdo-infra/rdo-release/+/47927">Edit</a> specification file
+3. Trigger CBS build
+4. Publish the RPM on repos.fedorapeople.org</p>
+<p>More details about used commands can be found in <a href="https://issues.redhat.com/browse/RDO-97">task</a> description.</p>
+<h3 id="13-create-weirdo-jobs-to-promote-to-release-tag">13. Create weirdo jobs to promote to -release tag</h3>
+<p>The following jobs have to be defined in <a href="https://review.rdoproject.org/r/c/rdo-jobs/+/47946">rdo-jobs repo</a>. Such jobs will be
+triggered whenever promoting the package to -release tag.</p>
+<h3 id="14-add-the-new-release-to-dashboards">14. Add the new release to dashboards</h3>
+<p>Currently there are three dashboards to update with new release:</p>
+<ol>
+<li><a href="https://review.rdoproject.org/r/c/rdo-infra/rdo-dashboards/+/48199">rdo-dev dashboard</a></li>
+<li><a href="https://review.rdoproject.org/r/c/rdo-infra/ci-config/+/48196">Promotion dashboard</a></li>
+<li><a href="https://review.rdoproject.org/r/c/rdo-infra/releng/+/47596">FTBFS dashboard</a></li>
+</ol>
+<h3 id="15-create-the-new-centos-release-openstack-">15. Create the new centos-release-openstack-<release></h3>
+<p>To prepare for final release, the <a href="https://git.centos.org/rpms/centos-release-openstack/c/41a7fbac122dda2e5bbe36f733b90edb496f09ed?branch=c9s-sig-cloud-openstack-antelope">new release rpm</a> has to be created
+ for CentOS CloudSIG in extras9s-extras-common-el9s, and later tagged in extras9s-extras-common-testing, -release, and finally <a href="https://cbs.centos.org/koji/buildinfo?buildID=43646">build</a>.</p>
+<h3 id="16-promote-ga-builds-to-testing-and-release">16. Promote GA builds to -testing and -release</h3>
+<p>The final step to publish the next RDO release is performed by review as following <a href="https://review.rdoproject.org/r/c/rdoinfo/+/48279">one</a> and <a href="https://review.rdoproject.org/r/c/rdoinfo/+/48266">another</a>,
+ which can be done only after completing previous step.</p>
+<h3 id="17-enable-remaining-monitoring-on-grafana">17.  Enable remaining monitoring on Grafana</h3>
+<p>Also monitoring, other than dashboards, should be activated for the new release: <a href="https://softwarefactory-project.io/r/c/software-factory/sf-infra/+/26500">Prometheus</a> and <a href="https://softwarefactory-project.io/r/c/software-factory/sf-infra/+/26925">Grafana</a>.</p>
+<h3 id="18-unpin-non-openstack-puppet-modules-and-tempest-plugins-in-master-release">18. Unpin non OpenStack puppet modules and tempest plugins in master release</h3>
+<p>After the release, these projects can go back to active master. To do so, they have to be unpinned in <a href="https://review.rdoproject.org/r/c/rdoinfo/+/42313">rdoinfo</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

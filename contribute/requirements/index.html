@@ -1,0 +1,1545 @@
+<!--
+mkdocs-coverpage - Customizable cover page for an MkDocs site.
+Copyright (C) 2024 Tyler McCann https://github.com/tylerdotrar
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+
+<!-- Elements added to "main.html" will be displayed on all pages -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="amoralej">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon-rdo.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>General purpose requirements - An OpenStack distribution</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <!-- main.html | Added "navigation.instant" support -->
+    <link rel="canonical" href=".">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="rdo" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#requirements-management-in-rdo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="An OpenStack distribution" class="md-header__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../../assets/rdologo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An OpenStack distribution
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              General purpose requirements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deliverables/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deliverables
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deploy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Deploy RDO
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contribute
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../factory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Process
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../community/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Community
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="An OpenStack distribution" class="md-nav__button md-logo" aria-label="An OpenStack distribution" data-md-component="logo">
+      
+  <img src="../../assets/rdologo.png" alt="logo">
+
+    </a>
+    An OpenStack distribution
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../deliverables/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deliverables
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Deliverables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/release-cadence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release cadence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview of available RDO repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/trunk-repos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RDO Trunk repos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/general_concept_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparison of RDO's deliverables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deliverables/how-to-install-rdo-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to install RDO repositories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../deploy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Deploy RDO
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy RDO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contribute
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packaging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Releasing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../factory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Process
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Process
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/dlrn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DLRN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/workflow-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Delivery pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../factory/promotion-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workflow - Promotion pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../community/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/community-meeting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Community minutes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-openstack-requirements-in-rdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing OpenStack requirements in RDO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing OpenStack requirements in RDO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-requirement-to-rdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new requirement to RDO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-a-requirement-in-rdo-cloudsig-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating a requirement in RDO CloudSIG repositories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating a requirement in RDO CloudSIG repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packages-provided-in-centos-stream-os-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packages provided in CentOS Stream OS repos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packages-not-provided-in-centos-stream-os-repos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packages not provided in CentOS Stream OS repos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-us" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact us
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="requirements-management-in-rdo">Requirements management in RDO</h1>
+<h2 id="introduction">Introduction</h2>
+<p>OpenStack services usually need some pieces of software which are not developed as
+part of the project. They are are general purpose libraries (typically python
+modules) or services used in some way to run or build OpenStack packages as databases, messaging brokers, etc...</p>
+<p>OpenStack <a href="https://docs.openstack.org/developer/requirements/">requirements project</a>
+defines the policies and processes to manage requirements in upstream projects from
+a global perspective.</p>
+<h2 id="managing-openstack-requirements-in-rdo">Managing OpenStack requirements in RDO</h2>
+<p>RDO provides all requirements for packaged services in RPM format from their own repos,
+so that no software should be installed from external repositories. This packages can
+be provided by:</p>
+<ul>
+<li>
+<p>CentOS base repositories, which is the preferred source of packages whenever possible:</p>
+<ul>
+<li>For CentOS Stream 9: <a href="http://mirror.stream.centos.org/9-stream/BaseOS/">BaseOS</a>,
+<a href="http://mirror.stream.centos.org/9-stream/AppStream/">AppStream</a>,
+<a href="http://mirror.stream.centos.org/9-stream/CRB/">CRB</a> and
+<a href="http://mirror.stream.centos.org/9-stream/HighAvailability/">HighAvailability</a>.</li>
+</ul>
+</li>
+<li>
+<p>Other <a href="https://wiki.centos.org/SpecialInterestGroup">CentOS SIG repositories</a> (Virtualization,
+Storage, NFV, etc...). When a required package is being maintained by other CentOS SIG, it
+will be reused for RDO repos.</p>
+</li>
+<li><a href="../../deliverables/repos/#rdo-cloudsig-repositories">RDO CloudSIG repositories</a>. When a package is not available from previous repos, it will
+be provided in RDO repositores. Note that it's required that these packages exist previously
+in Fedora so that they can be rebuilt with minimal changes (if any).</li>
+</ul>
+<p>If you have questions or special requests, don't hesitate in contacting RDO using our
+<a href="../../community/mailing-lists/">mailing lists</a> or #rdo channel on OFTC.</p>
+<h3 id="adding-a-new-requirement-to-rdo">Adding a new requirement to RDO</h3>
+<p>When a new requirement is needed for an OpenStack project included in RDO, package maintainers
+must follow this workflow:</p>
+<p><img alt="RDO dependencies" src="../../assets/new-dependencies-2.png" /></p>
+<p>Note that, typically new requirements are added only for the release of OpenStack under
+development, not for stable releases, although they may be accepted in previous releases
+if it's properly justified.
+Also, as we're currently maintaining releases on CentOS Linux 7, CentOS Stream 8 &amp; 9, there
+are particularities in adding new requirements for each of them.</p>
+<ol>
+<li>
+<p>If the project follows global-requirements processes, make sure that the requirement has been
+added to global-requirements.txt and upper-constraints.txt files as described in the <a href="https://github.com/openstack/requirements/#proposing-changes">upstream
+documentation</a>
+    <br /></p>
+</li>
+<li>
+<p>Check if the new requirement is present in CentOS base channels. The easiest way to do this
+is using 'repoquery' command from a system running RPM based OS(CentOS/RHEL/Fedora):</p>
+<pre><code># For CentOS Stream 9:
+repoquery --repofrompath=tmp,http://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os \
+--repofrompath=tmp2,http://mirror.stream.centos.org/9-stream/AppStream/x86_64/os \
+--repofrompath=tmp3,http://mirror.stream.centos.org/9-stream/CRB/x86_64/os \
+--repofrompath=tmp4,http://mirror.stream.centos.org/9-stream/HighAvailability/x86_64/os \
+--disablerepo=* --enablerepo=tmp* "*&lt;dependency&gt;"
+
+# For CentOS Stream 8:
+repoquery --repofrompath=tmp,http://mirror.centos.org/centos/8-stream/BaseOS/x86_64/os \
+--repofrompath=tmp2,http://mirror.centos.org/centos/8-stream/AppStream/x86_64/os \
+--repofrompath=tmp3,http://mirror.centos.org/centos/8-stream/PowerTools/x86_64/os \
+--repofrompath=tmp4,http://mirror.centos.org/centos/8-stream/HighAvailability/x86_64/os \
+--disablerepo=* --enablerepo=tmp* "*&lt;dependency&gt;"
+</code></pre>
+<p>If it's present, the desired package is already available to RDO users.
+<br /></p>
+</li>
+<li>
+<p>If the package is not in CentOS base repos, you can check if it has been already built by
+the CloudSIG using <a href="../intro-packaging/#rdopkg">rdopkg</a>:</p>
+<pre><code>rdopkg findpkg &lt;package name&gt;
+</code></pre>
+<p>as, for example:</p>
+<pre><code>$ rdopkg findpkg python-eventlet
+name: python-eventlet
+project: python-eventlet
+conf: fedora-dependency
+upstream: https://src.fedoraproject.org/rpms/python-eventlet
+patches: None
+distgit: http://review.rdoproject.org/r/deps/python-eventlet.git
+buildsys-tags:
+  cloud7-openstack-ocata-release: python-eventlet-0.18.4-2.el7
+  cloud7-openstack-ocata-testing: python-eventlet-0.18.4-2.el7
+  cloud7-openstack-pike-release: python-eventlet-0.20.1-2.el7
+  cloud7-openstack-pike-testing: python-eventlet-0.20.1-2.el7
+  cloud7-openstack-queens-release: python-eventlet-0.20.1-6.el7
+  cloud7-openstack-queens-testing: python-eventlet-0.20.1-6.el7
+  cloud7-openstack-rocky-release: python-eventlet-0.20.1-6.el7
+  cloud7-openstack-rocky-testing: python-eventlet-0.20.1-6.el7
+  cloud7-openstack-stein-release: python-eventlet-0.24.1-3.el7
+  cloud7-openstack-stein-testing: python-eventlet-0.24.1-3.el7
+  cloud7-openstack-train-release: python-eventlet-0.25.1-1.el7
+  cloud7-openstack-train-testing: python-eventlet-0.25.1-1.el7
+  cloud8-openstack-train-release: python-eventlet-0.25.2-3.1.el8
+  cloud8-openstack-train-testing: python-eventlet-0.25.2-3.1.el8
+  cloud8-openstack-ussuri-release: python-eventlet-0.25.2-3.el8
+  cloud8-openstack-ussuri-testing: python-eventlet-0.25.2-3.el8
+  cloud8-openstack-victoria-candidate: python-eventlet-0.25.2-3.el8
+  cloud8-openstack-victoria-release: python-eventlet-0.25.2-3.1.el8
+  cloud8-openstack-victoria-testing: python-eventlet-0.25.2-3.1.el8
+  cloud8s-openstack-train-testing: python-eventlet-0.25.2-3.1.el8
+  cloud8s-openstack-ussuri-release: python-eventlet-0.25.2-3.1.el8
+  cloud8s-openstack-ussuri-testing: python-eventlet-0.25.2-3.1.el8
+  cloud8s-openstack-victoria-release: python-eventlet-0.25.2-3.1.el8
+  cloud8s-openstack-victoria-testing: python-eventlet-0.25.2-3.1.el8
+  cloud8s-openstack-wallaby-release: python-eventlet-0.30.0-1.1.el8
+  cloud8s-openstack-wallaby-testing: python-eventlet-0.30.0-1.1.el8
+  cloud8s-openstack-xena-candidate: python-eventlet-0.31.1-1.el8
+  cloud8s-openstack-xena-release: python-eventlet-0.31.1-1.el8
+  cloud8s-openstack-xena-testing: python-eventlet-0.31.1-1.el8
+  cloud8s-openstack-yoga-testing: python-eventlet-0.31.1-1.el8
+  cloud9s-openstack-wallaby-testing: python-eventlet-0.30.2-1.el9s
+  cloud9s-openstack-xena-testing: python-eventlet-0.31.1-1.el9s
+  cloud9s-openstack-yoga-testing: python-eventlet-0.31.1-1.el9s
+centos-distgit: https://git.centos.org/rpms/python-eventlet
+master-distgit: http://review.rdoproject.org/r/deps/python-eventlet.git
+review-origin: null
+review-patches: null
+tags:
+  dependency: null
+maintainers:
+- amoralej@redhat.com
+- jcapitao@redhat.com
+- ykarel@redhat.com
+</code></pre>
+<p>Note that the version of the package included in repositories is given by the
+CBS tags applied to each package (shown under buildsys-tags section for each package).
+Tags have a format cloud9s-openstack-&lt;release&gt;-&lt;phase&gt; where:</p>
+<ul>
+<li>release: is the OpenStack release name, as Wallaby, Xena or Yoga.</li>
+<li>phase:</li>
+<li><code>candidate</code> phase is assigned to packages to be rebuilt in
+  CBS but not pushed to any RDO repository.</li>
+<li><code>el&lt;centos_version&gt;-build</code> is assigned to packages that only required to build other
+  packages but are not a runtime requirement for any other package. (e.g centos_version
+  can be '9s' or '8')</li>
+<li><code>testing</code> phase means that the package is used in deployments using RDO Trunk
+  repo and published in a testing repo, but not official CloudSIG repository.</li>
+<li><code>release</code> phase means that is published in the official CloudSIG repository.
+  This phase is only available after a RDO version has been officially released
+  not for the one currently under development.</li>
+</ul>
+<p>For example, the package included in cloud8s-openstack-xena-release will be published
+in the <a href="http://mirror.centos.org/centos/8-stream/cloud/x86_64/openstack-xena/">CloudSIG repo for xena</a>. The CBS tags flow will be:
+- <em>Runtime requirements:</em> candidate -&gt; testing -&gt; release
+- <em>Build requirements:</em> candidate -&gt; el8-build or el9s-build</p>
+<p>Note that, for the release currently under development (Yoga right now), testing and
+el9s-build phase will be available. The package included in cloud9s-openstack-yoga-testing
+will be the one used to deploy from RDO Trunk Master repositories and it will be
+automatically pushed to cloud9s-openstack-yoga-release at RDO Yoga is officially
+released and published.</p>
+<p>If the package is found for the required CBS tag, it's already in RDO repositories
+and no more actions are needed to add it to the repos.
+<br /></p>
+</li>
+<li>
+<p>In case that the dependency is not in CentOS base or CloudSIG repo, you can check if it has been built
+by other SIGs in <a href="http://cbs.centos.org/koji/">CBS web interface</a>. You can use wildcards in the packages
+search expression. If you find the desired dependency, you can open a ticket in <a href="https://issues.redhat.com/projects/RDO/issues">RDO
+Jira board</a> requesting
+the inclusion of the package in RDO repos. RDO Core members will handle the request.
+    <br /></p>
+</li>
+<li>
+<p>If the new package is not in CBS, you must check if it's packaged in Fedora using the <a href="https://koji.fedoraproject.org/koji/">Koji Web
+Interface</a>. If the package exists, you need to open
+a review to <a href="https://review.rdoproject.org/r/#/q/project:rdoinfo">rdoinfo project in RDO gerrit instance</a>.</p>
+<p>For CentOS Stream 8 and 9, you need to add the new dependency to <code>deps.yml</code> file as in <a href="https://review.rdoproject.org/r/#/c/18691">this example</a>:</p>
+<pre><code># in deps.yml
+- project: python-ssh-python
+  name: python-ssh-python
+  conf: fedora-dependency
+</code></pre>
+<p>For CentOS Stream 8 only, you also need to add buildsys-tag in <code>buildsys-tags/cloud8s-openstack-yoga-candidate.yml</code></p>
+<pre><code># in buildsys-tags/cloud8s-openstack-yoga-candidate.yml
+- project: python-ssh-python
+  buildsys-tags:
+    cloud8s-openstack-yoga-candidate: python-ssh-python-0.9.0-1.el8
+</code></pre>
+<p>Where:
+- <code>project</code> and <code>name</code> must be the name of the main package (the same as in fedora).
+- <code>conf</code> must be <code>fedora-dependency</code>.
+- In <code>buildsys-tags</code> section a new line for the candidate tag in the OpenStack
+release in development (cloud8s-openstack-yoga-candidate) with the required
+NVR (name-version-release), which must be the same one found in Fedora
+replacing fcXX part in release by el8. For example, for <a href="https://koji.fedoraproject.org/koji/buildinfo?buildID=1872786">python-ssh-python</a>
+the build is python-ssh-python-0.9.0-1.fc36, so in buildsys-tags/cloud8s-openstack-yoga-candidate.yml,
+cloud8s-openstack-yoga-candidate must point to python-ssh-python-0.9.0-1.fc36.</p>
+<p>Once merged this review will be enough to rebuild the Fedora package in the CentOS Build System for CentOS Stream 8.</p>
+<p>For CentOS Stream 9, a few more steps are required to be able to rebuild the patch in CentOS Build System.
+After the review in rdoinfo repo is merged, some changes in config need to be done in the config which will be
+automatically triggered.
+You can check when the distgit for the new dependency is created by monitoring if it
+appears in https://review.rdoproject.org/r/admin/repos/deps/<dependency>.</p>
+<p>Once the repo is available, you can propose a review to build the package.
+We have a tool which does the work: <a href="https://review.rdoproject.org/cgit/gating_scripts/tree/setup_distgit.sh">setup_distgit.sh</a></p>
+<pre><code>$ git clone https://review.rdoproject.org/cgit/gating_scripts
+$ cd gating_scripts
+$ bash -x setup_distgit.sh google-benchmark google-benchmark-1.6.0-1.fc36 yoga 9s
+$ cd workdir/&lt;project_name&gt;
+$ git diff
+</code></pre>
+<p>Basically, the script clones the new repo, downloads the Fedora build and dispatches SPEC
+and sources files to the right place.</p>
+<p>If you’re ok with the change, submit it.
+Note: this last step is for CentOS Stream 9 only.</p>
+<p>This review will rebuild the Fedora package in the CentOS Build System for CentOS Stream 9
+and make it available to be pushed to the next CBS phase.
+<br /></p>
+</li>
+<li>
+<p>When the packages doesn't exist even in Fedora you need to add the package following the <a href="https://fedoraproject.org/wiki/New_package_process_for_existing_contributors">New package
+process</a>. Note that a Fedora
+packager needs to participate in this process. While RDO core members may maintain the new package for
+common requirements used by different projects, dependencies for specific project must be maintained in
+Fedora by the project team. Once the package is included in Fedora repos you can
+create a gerrit review as explained in step 5.
+    <br /></p>
+</li>
+<li>
+<p>Once the package is rebuilt in CBS (review in step 5 is merged) you can push
+it to the next phase, this means testing (for runtime dependencies) or el9s-build (for build-time dependencies).
+This is done by sending a new review to <a href="https://review.rdoproject.org/r/#/q/project:rdoinfo">rdoinfo project</a>
+adding a new line under <code>buildsys-tags</code> to both <code>buildsys-tags/cloud9s-openstack-yoga-testing.yml</code> and
+<code>buildsys-tags/cloud8s-openstack-yoga-testing.yml</code> file for the new tag as in
+<a href="https://review.rdoproject.org/r/c/rdoinfo/+/37244">this example</a>:</p>
+<pre><code># in buildsys-tags/cloud8s-openstack-yoga-testing.yml
+buildsys-tags:
+  cloud8s-openstack-yoga-testing: python-stestr-3.2.0-3.el8
+
+# in buildsys-tags/cloud9s-openstack-yoga-testing.yml
+buildsys-tags:
+  cloud9s-openstack-yoga-testing: python-stestr-3.2.0-3.el9s
+</code></pre>
+<p>Once this review is merged, the tag will be applied to this build and the package
+ will be added to the testing repo for Yoga (note that some delay, up to 30 minutes
+ is expected).
+<br /></p>
+</li>
+<li>
+<p>After the package is available in the repos, you can add it to the list of <em>Requires</em> or <em>BuildRequires</em> in
+your package spec file. Note that optional dependencies not used in default or common configurations should
+not be added as Requires but installed only when needed.</p>
+</li>
+</ol>
+<h3 id="updating-a-requirement-in-rdo-cloudsig-repositories">Updating a requirement in RDO CloudSIG repositories</h3>
+<p>There are some rules to follow when a requirement update is needed by a OpenStack project. Following diagram summarizes the considerations to update
+the dependencies in RDO.</p>
+<p><img alt="CloudSIG dependencies" src="../../assets/CloudSIG-dependencies.png" /></p>
+<p>If the dependency is included in upstream OpenStack <a href="https://docs.openstack.org/project-team-guide/dependency-management.html"><strong>global requirements project</strong></a>, the required version should be equal (exceptions will be shown below) to
+the version in <a href="https://github.com/openstack/requirements/blob/master/upper-constraints.txt">upper-constraints</a> file
+for the appropiate OpenStack release (requirements project has stable/\<release> branches).
+For the master branch, RDO provides a report to quickly check the state of <a href="https://dashboards.rdoproject.org/report-uc-cs9">dependencies compared to upper-constraints</a>.</p>
+<h4 id="packages-provided-in-centos-stream-os-repos">Packages provided in CentOS Stream OS repos</h4>
+<ul>
+<li>For packages provided in CentOS Stream OS repos, the preferred option is to consume those packages from OS whenever possible, even if versions are below the ones in upper-constraints.txt file.
+If OpenStack requires newer versions of those packages to work properly (for example, an OpenStack project requires a minimal version of the dep which is newer that the one in CentOS)
+there are two options:</li>
+<li>Request a package update in CentOS by opening a <a href="https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%209&amp;version=CentOS%20Stream">bug in RHEL product</a>.
+This bug will be evaluated following the RHEL process.</li>
+<li>Add it to RDO repository following the process described in <a href="#adding-a-new-requirement-to-rdo">Adding a new requirement to RDO</a>. Note that this may impact other packages using it in the Operating System so this option should be minimized.</li>
+</ul>
+<h4 id="packages-not-provided-in-centos-stream-os-repos">Packages not provided in CentOS Stream OS repos</h4>
+<ul>
+<li>The required dependencies not included in the CentOS OS are provided in the RDO repos. Before updating a dependency in RDO, the package must be updated
+to the required version in Fedora. If it has not been updated first you can:</li>
+<li>Contact Fedora package maintainer or search for open bug against component, example <a href="https://bugzilla.redhat.com/buglist.cgi?product=Fedora&amp;component=python-migrate&amp;bug_status=__open__">component:python-migrate</a>,
+if bug does not exist, open a <a href="https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora">bug for Fedora product</a> requesting the update.</li>
+<li>
+<p>Or you can directly propose to update fedora package by creating your own pull request, following
+<a href="https://docs.fedoraproject.org/en-US/packaging-guidelines/">Fedora packaging guide</a> and <a href="https://docs.fedoraproject.org/en-US/ci/pull-requests/">Fedora CI - Pull Requests</a>.
+Once the pull request merged, the package must be built by its maintainer. Building Fedora’s packages can be monitored on <a href="https://koji.fedoraproject.org/koji/packages">Koji</a>.</p>
+</li>
+<li>
+<p>Once the package is build in Fedora, you can update the requirement in RDO. For CentOS Stream 9, you need to rebuild the package first by sending
+ a review to the <a href="https://review.rdoproject.org/r/">RDO Gerrit instance</a> in the distgit project <code>deps/&lt;package name&gt;</code> in the branch <code>c9s-&lt;openstack version&gt;-rdo</code>.
+RDO provides the script <a href="https://review.rdoproject.org/cgit/gating_scripts/tree/setup_distgit.sh">setup_distgit.sh</a> to ease the preparation of the
+dependency update review by importint content from Fedora. i.e. if you need to update python module <code>foo</code> to version 1.0.0 in OpenStack Zed and
+the package is ready in fedora as <code>python-foo-1.0.0-1.fc37</code> you should execute:</p>
+<pre><code>$ git clone https://review.rdoproject.org/cgit/gating_scripts
+$ cd gating_scripts
+$ bash -x setup_distgit.sh python-foo python-foo-1.0.0-1.fc37 zed 9s
+$ cd workdir/python-foo
+$ git diff
+</code></pre>
+<p>Basically, the script clones the new repo, downloads the Fedora build and dispatches SPEC
+and sources files to the right place.</p>
+<p>If you’re ok with the change, commit it and send the review. Note that, in some cases, changes are required to build fedora packages for CentOS.
+It is usually a good idea to test new package with <a href="https://fedoraproject.org/wiki/Using_Mock_to_test_package_builds">mock</a> or rpm-build.</p>
+</li>
+<li>
+<p>Once the patch in <code>deps/&lt;dependency&gt;</code> is merged, the package is built and tagged in <a href="https://cbs.centos.org/koji/">CBS</a> but will not be available
+in the RDO repositories. The next step is to include the package in RDO Testing repo for the appropiate OpenStack release. This is done by sending
+a patch to the rdoinfo project, adding it to the file <code>buildsys-tags/cloud9s-openstack-&lt;openstack release&gt;-testing</code> like <a href="https://review.rdoproject.org/r/c/rdoinfo/+/37244">this example</a>.</p>
+</li>
+<li>
+<p>Once the package exist in testing tag it will be available in the RDO Trunk repositories to be used in jobs or update in rpm spec. For stable releases (non master)
+an automatic task will also propose review to rdoinfo to upddate the package the corresponding <code>release</code> tag in the same OpenStack release in rdoinfo repo.
+Once that  patch is merged, the update will also appear in the <a href="http://mirror.stream.centos.org/SIGs/9-stream/cloud/x86_64/">CloudSIG official CentOS mirror</a>.</p>
+</li>
+</ul>
+<h2 id="contact-us">Contact us</h2>
+<p>If you have questions or special requests about requirements, don't hesitate to contact RDO community members using our
+<a href="../../community/mailing-lists/">mailing lists</a> or #rdo channel on OFTC.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
