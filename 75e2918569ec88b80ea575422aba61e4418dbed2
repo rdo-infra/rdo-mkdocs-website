@@ -1,0 +1,9 @@
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+1: Ivan Anfimov <lazekteam@gmail.com>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 16 May 2025 09:03:47 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/rdo-infra/rdo-mkdocs-website/+/57550
+Project: rdo-infra/rdo-mkdocs-website
+Branch: refs/heads/master
