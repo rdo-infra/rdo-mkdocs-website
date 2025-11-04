@@ -53,7 +53,7 @@ GitHub account, you can skip this step.
 <a name="sign-in"/>
 
 ### Sign up to `review.rdoproject.org`
-Sign-in to [review.rdoproject.org](https://review.rdoproject.org/auth/login)
+Sign-in to [review.rdoproject.org](https://review.rdoproject.org/auth/realms/SF/account/)
 using your GitHub account.
 
 <a name="add-ssh"/>

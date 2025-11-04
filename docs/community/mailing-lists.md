@@ -11,15 +11,17 @@ There are three main mailing lists for RDO discussion:
 
 The main discussion list if you are looking for help on the RDO project.
 
-*   [Subscribe](https://lists.rdoproject.org/mailman/listinfo/users)
-*   [Archives](https://lists.rdoproject.org/pipermail/users/)
+*   [Subscribe](https://lists.rdoproject.org/admin/lists/users.lists.rdoproject.org/)
+*   [Archives](https://lists.rdoproject.org/archives/list/users@lists.rdoproject.org/)
+*   [Archives (up to 2021/10)](https://lists.rdoproject.org/pipermail/users/)
 
 ## Developers - dev@lists.rdoproject.org
 
 The main discussion list for RDO project contributors.
 
-*   [Subscribe](https://lists.rdoproject.org/mailman/listinfo/dev)
-*   [Archives](https://lists.rdoproject.org/pipermail/dev/)
+*   [Subscribe](https://lists.rdoproject.org/admin/lists/dev.lists.rdoproject.org/)
+*   [Archives](https://lists.rdoproject.org/archives/list/dev@lists.rdoproject.org/)
+*   [Archives (up to 2021/10)](https://lists.rdoproject.org/pipermail/dev/)
 
 ## Newsletter - newsletter@lists.rdoproject.org - *inactive*
 
