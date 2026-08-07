@@ -1,4 +1,4 @@
-To run your local instance of documantation to test or develop, use following commands:
+To run your local instance of documentation to test or develop, use following commands:
 
 ```
 git clone "https://review.rdoproject.org/r/rdo-infra/rdo-mkdocs-website"

@@ -1,6 +1,6 @@
 # Contribute to RDO
 
-If you are interested in contribute to RDO project, here you can find all documentation related to this process.
+If you are interested in contributing to the RDO project, here you can find all documentation related to this process.
 
 Our community strives to operate according to the terms of the
 [OpenStack Code of Conduct](https://www.openstack.org/legal/community-code-of-conduct/).
