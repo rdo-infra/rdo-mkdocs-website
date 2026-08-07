@@ -260,7 +260,7 @@ For example `openstack-neutron-8.1.1-0.20160531171125.ddfe09c.el7.centos.noarch.
 
 ## RDO Trunk Packaging Guide
 
-In RDO Trunk packages are built automatically by [DLRN](#DLRN) from
+In RDO Trunk packages are built automatically by [DLRN](#dlrn) from
 `.spec` templates residing in `rpm-master` and `rpm-$RELEASE` [distgits](#distgit).
 
 In order to build an `RPM` with the master packaging you'll need to

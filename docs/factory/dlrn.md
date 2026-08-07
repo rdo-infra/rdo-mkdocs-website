@@ -12,7 +12,7 @@ The basic DLRN flow is:
 
 - For each package listed in the [RDO metadata file](https://github.com/redhat-openstack/rdoinfo/blob/master/rdo.yml):
     - Fetch the latest upstream commit from the OpenStack Git repositories
-    - Fetch the latest commit from the [distgit](../contribute/intro-packaging.md#distgit---where-the-spec-file-lives) repositories
+    - Fetch the latest commit from the [distgit](../contribute/intro-packaging.md#distgit-where-the-spec-file-lives) repositories
     - Build an RPM package using the source and distgit commits
     - Create a YUM repository with that package, and the latest build package for the other packages
     - If a package build fails, open a review in [the RDO Gerrit](https://review.rdoproject.org) to track and fix the issue.
