@@ -17,6 +17,6 @@
     # MD013 Line length
     # MD033 Inline HTML
     - name: Run markdown linter 
-      command: pymarkdown -d MD013 -d MD033 scan -r .
+      command: pymarkdown -d MD013,MD033 scan -r .
       args:
         chdir: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
