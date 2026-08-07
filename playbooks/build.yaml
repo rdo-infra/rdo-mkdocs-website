@@ -16,12 +16,6 @@
       command: mkdocs build
       args:
         chdir: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
-      register: mkdocs_exit_code
-
-    - name: Check results of mkdocs build
-      fail:
-        msg: "mkdocs building failed!"
-      when: mkdocs_exit_code.rc != 0
 
     - name: Copy static page to logs
       synchronize:
